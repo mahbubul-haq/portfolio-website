@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Nav from "./components/nav/Nav";
+import MyNav from "./components/nav/Nav";
 
 import About from './components/pages/About';
 import Home from './components/pages/Home';
@@ -16,11 +17,10 @@ function App() {
   
 
   return (
-    <div id="body">
-      <div id="container">
+      <Container fluid className='p-0'>
        
         <Router>
-          <Nav />
+          <MyNav />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About/>} />
@@ -30,8 +30,7 @@ function App() {
         </Router>
 
          
-      </div>
-    </div>
+      </Container>
   );
 }
 

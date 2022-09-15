@@ -1,6 +1,58 @@
-.nav-items-dark-mode {
+.custom-navbar {
+  background-color: rgb(16, 16, 47);
+  color: white;
+}
+.custom-nav {
+  color: rgb(255, 255, 255);
+}
+.custom-nav-link,
+.custom-navbar-brand,
+.custom-navbar-toggle,
+.custom-navbar-collapse {
+  color: rgb(255, 255, 255);
+}
+
+.custom-nav-link:hover {
+  color: blue;
+}
+
+.custom-nav-link:active,
+.custom-nav-link:focus {
+  color: blue;
+}
+
+.custom-navbar-brand:hover {
+  color: blue;
+}
+
+.custom-navbar-brand:active,
+.custom-navbar-brand:focus {
+  color: blue;
+}
+
+.custom-navbar-toggle {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+}
+
+.custom-navbar-toggle:hover,
+.custom-navbar-toggle:focus,
+.custom-navbar-toggle:active {
+  cursor: pointer;
+  border: none;
+  /* outline: 2px solid black;
+  outline-offset: 2px; */
+  /* add a box shadow around the element*/
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.custom-navbar-toggle-icon {
+  margin: 0;
+  padding: 0;
+}
+/* .nav-items-dark-mode {
   display: block;
-  /* margin-left: auto; */
+   margin-left: auto; 
 }
 #nav-container {
   width: 100%;
@@ -94,4 +146,4 @@
 .dark-nav {
   justify-self: flex-end;
   align-self: center;
-}
+} */

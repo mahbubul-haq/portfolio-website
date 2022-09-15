@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { FaBars } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
 import "./Nav.css";
 
@@ -83,8 +84,8 @@ const MyNav = () => {
 
   return (
     <>
-      <Navbar expand="md" className="custom-navbar" variant="dark">
-        <Container fluid className="custom-navbar" >
+      <Navbar expand="md" className="custom-navbar-navbar" variant="dark">
+        <Container fluid className="custom-navbar"  >
           <Navbar.Brand
             className="custom-navbar-brand"
             role="button"
@@ -97,14 +98,14 @@ const MyNav = () => {
             Mahbubul Haque
           </Navbar.Brand>
           <Navbar.Toggle className="custom-navbar-toggle" aria-controls="basic-navbar-nav" >
-            {/* <BsList className="custom-navbar-toggle-icon" size={33}/> */}
+            <FaBars className="custom-navbar-toggle-icon" size={25}/>
           </Navbar.Toggle>
-          <Navbar.Collapse className="custom-navbar-collapse" id="basic-navbar-nav">
-            <Nav className="m-auto custom-nav">
+          <Navbar.Collapse className="custom-navbar-collapse ms-auto" id="basic-navbar-nav">
+            <Nav className="text-center m-md-auto custom-nav">
               <Nav.Link
                 className="custom-nav-link"
                 role="button"
-                onClick={() => {
+                onClick={() => { 
                   setPage(1);
                   navigate("/about");
                 }}

@@ -1,15 +1,34 @@
 .custom-navbar {
-  background-color: rgb(16, 16, 47);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgb(0, 0, 0);
+  padding: 6px 10px 6px 10px;
 }
+
+.custom-navbar-navbar {
+  padding: 0;
+  margin: 0;
+}
+
 .custom-nav {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .custom-nav-link,
 .custom-navbar-brand,
 .custom-navbar-toggle,
 .custom-navbar-collapse {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.custom-nav-link {
+  margin: 0px 10px 0px 10px;
+  font-weight: 500;
+  transition: color 0.5s ease-in-out;
+}
+
+.custom-navbar-brand {
+  font-weight: 500;
+  transition: color 0.5s ease-in-out;
+  margin-left: 10px;
 }
 
 .custom-nav-link:hover {
@@ -32,7 +51,9 @@
 
 .custom-navbar-toggle {
   background-color: transparent;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
 }
 
 .custom-navbar-toggle:hover,
@@ -40,16 +61,32 @@
 .custom-navbar-toggle:active {
   cursor: pointer;
   border: none;
+  outline: none;
   /* outline: 2px solid black;
   outline-offset: 2px; */
   /* add a box shadow around the element*/
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+  box-shadow: none;
 }
 
 .custom-navbar-toggle-icon {
-  margin: 0;
+  margin: 0 10px 0 0;
   padding: 0;
+  color: black;
+  transition: color 0.3s ease-in-out;
 }
+.custom-navbar-toggle-icon:hover {
+  color: rgb(27, 4, 203);
+}
+
+@media screen and (max-width: 768px) {
+  .custom-nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .custom-navbar {
+    padding-left: 10px;
+  }
+}
+
 /* .nav-items-dark-mode {
   display: block;
    margin-left: auto; 

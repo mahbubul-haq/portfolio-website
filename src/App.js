@@ -17,7 +17,7 @@ function App() {
   
 
   return (
-      <Container fluid className='p-0'>
+      <Container fluid className='p-0 container-background'>
        
         <Router>
           <MyNav />

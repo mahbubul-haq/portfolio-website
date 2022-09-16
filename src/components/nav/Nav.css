@@ -1,5 +1,7 @@
 .custom-navbar {
-  background-color: rgba(71, 41, 41, 0.1);
+  /* background-color: rgba(71, 41, 41, 0.1); */
+  /* add box shadow below navbar */
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   color: rgb(0, 0, 0);
   padding: 6px 10px 6px 10px;
   transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -92,11 +94,13 @@
 }
 
 .dark-mode-container {
-  background-color: rgb(33, 32, 32);
+  background-color: #121212;
+  /* background-color: #141414; */
   color: rgb(255, 255, 255);
 }
 .dark-mode-navbar {
-  background-color: rgb(255, 255, 255, 0.3);
+  /* box shadwo below navbar */
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
   color: white;
 }
 .color-white {

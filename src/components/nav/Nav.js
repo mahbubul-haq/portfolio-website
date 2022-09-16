@@ -99,7 +99,10 @@ const MyNav = () => {
               navigate("/");
             }}
           >
-            Mahbubul Haque
+            {/* <img src="images/logo_transparent.png" className="img-fluid" style={{width:"45px", height:"45px", margin:"-4px 0px -4px 0", padding: "0"}} alt="logo" /> */}
+            <span className="navbar-brand-name">Mahbubul Haque</span>
+            {/* <span className="nav-logo badge pill">M</span>
+            <Badge variant="info" className="nav-logo">M</Badge> */}
           </Navbar.Brand>
           <Navbar.Toggle
             className="custom-navbar-toggle order-3"

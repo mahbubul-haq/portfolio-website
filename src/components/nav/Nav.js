@@ -45,6 +45,11 @@ const MyNav = () => {
         if (element && element.length > 0) {
           element[0].classList.add("color-white");
         }
+
+        element = document.getElementsByClassName("codeforces-icon-wrapper");
+        if (element && element.length > 0) {
+          element[0].classList.add("codeforces-icon-wrapper-dark");
+        }
       
 
       }
@@ -77,6 +82,11 @@ const MyNav = () => {
            element = document.getElementsByClassName("custom-navbar-toggle-icon");
             if (element && element.length > 0) {
               element[0].classList.remove("color-white");
+            }
+
+            element = document.getElementsByClassName("codeforces-icon-wrapper");
+            if (element && element.length > 0) {
+              element[0].classList.remove("codeforces-icon-wrapper-dark");
             }
 
       }

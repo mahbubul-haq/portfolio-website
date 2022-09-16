@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MyNav from "./components/nav/Nav";
 
-import About from './components/pages/About';
-import Home from './components/pages/Home';
+import { default as About, default as Home } from './components/pages/Home';
 import Projects from './components/pages/Projects';
 import Resume from './components/pages/Resume';
 

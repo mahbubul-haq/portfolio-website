@@ -7,6 +7,9 @@
   height: auto;
 }
 
+.about-name {
+  font-size: 170%;
+}
 .about-institute {
   font-size: 1.4rem;
   font-weight: 500;
@@ -16,9 +19,34 @@
   font-weight: 500;
 }
 
+.codeforces-icon-wrapper {
+  color: white;
+  /* set background color to <a> tag default color */
+  /*anchor tag default color" */
+  background-color: #1075e1;
+  border-radius: 3px;
+  height: 26px;
+  width: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.codeforces-icon-wrapper:hover {
+  background-color: #0b67ca;
+}
+
+.codeforces-icon-wrapper-dark {
+  color: #121212;
+}
+
 @media screen and (max-width: 768px) {
   .profile-picture {
     width: 100px;
+  }
+  .about-name {
+    font-size: 140%;
   }
   .about-institute {
     font-size: 1.1rem;
@@ -30,12 +58,12 @@
 
 @media screen and (max-width: 576px) {
   .about-name {
-    font-size: 100%;
+    font-size: 120%;
   }
   .about-institute {
-    font-size: 80%;
+    font-size: 100%;
   }
   .about-work {
-    font-size: 80%;
+    font-size: 100%;
   }
 }

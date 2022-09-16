@@ -4,23 +4,5 @@
   width: 100%;
   overflow: auto;
   color: black;
-}
-#dark-mode {
-  display: block;
-  margin-right: 20px;
-}
-
-#dark-mode:hover {
-  cursor: pointer;
-}
-
-#dark-mode-icon,
-#light-mode-icon {
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.dark-mode {
-  color: var(--dark-mode-color) !important;
-  background-color: var(--dark-mode-background-color) !important;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }

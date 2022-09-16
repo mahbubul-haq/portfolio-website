@@ -13,8 +13,6 @@ import "./Nav.css";
 
 
 const MyNav = () => {
-  // const [isNavBarExpanded, setIsNavBarExpanded] = useState(false);
-  // const [resized, setResized] = useState(false);
     const [page, setPage] = useState(0);
     const [darkMode, setDarkMode] = useState(false);
     const navigate = useNavigate();
@@ -84,7 +82,17 @@ const MyNav = () => {
       }
     }, [darkMode]);
 
-
+    useEffect(() => {
+      let element = document.getElementsByClassName("custom-nav-link");
+      for (let i = 0; i < element.length; i++) {
+        if (i + 1 === page) {
+          element[i].classList.add("current-page");
+        }
+        else {
+          element[i].classList.remove("current-page");
+        }
+      }
+    }, [page]);
 
   return (
     <>

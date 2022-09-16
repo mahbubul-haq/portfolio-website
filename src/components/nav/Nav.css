@@ -1,7 +1,7 @@
 .custom-navbar {
   /* background-color: rgba(71, 41, 41, 0.1); */
   /* add box shadow below navbar */
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   color: rgb(0, 0, 0);
   padding: 6px 10px 6px 10px;
   transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -100,7 +100,7 @@
 }
 .dark-mode-navbar {
   /* box shadwo below navbar */
-  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.2);
   color: white;
 }
 .color-white {
@@ -110,9 +110,13 @@
   color: black;
 }
 
+.current-page {
+  color: blue;
+}
+
 @media screen and (max-width: 768px) {
   .custom-nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(210, 210, 210, 0.705);
   }
   .custom-navbar-collapse {
     margin-bottom: 10px;

@@ -10,8 +10,12 @@ import "./cssFiles/About.css";
 
 const Home = () => {
   return (
-    <Container fluid className="basic-page-style">
-      <Row className="mt-1 mt-sm-2">
+    <Container
+      fluid
+      className="basic-page-style d-flex align-items-center justify-content-center"
+      style={{height: "100%", marginTop: "-52px", paddingTop: "72px"}}
+    >
+      <Row className="m-auto">
         <Col className="d-flex justify-content-center align-items-center">
           <Stack className="text-center" gap={1}>
             <div className="mb-2">
@@ -35,11 +39,10 @@ const Home = () => {
             <div className="mt-5 ms-auto me-auto">
               <Stack direction="horizontal" gap={2}>
                 <a
-                  href="https://www.google.com"
+                  href="https://www.linkedin.com/in/mahbubul-haque-807311189/"
                   target="_blank"
                   rel="noreferrer"
                   title="LinkedIn"
-                  
                 >
                   <FaLinkedin size={30} />
                 </a>
@@ -48,7 +51,6 @@ const Home = () => {
                   target="_blank"
                   rel="noreferrer"
                   title="Github"
-                  
                 >
                   <FaGithubSquare size={30} />
                 </a>
@@ -66,20 +68,12 @@ const Home = () => {
                   </div>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mahbubul-haque-0b1b1b1b1/"
+                  href="https://web.facebook.com/mahbubulhaque99"
                   target="_blank"
                   rel="noreferrer"
                   title="Facebook"
                 >
                   <FaFacebookSquare size={30} />
-                  
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mahbubul-haque-0b1b1b1b1/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  click
                 </a>
               </Stack>
             </div>

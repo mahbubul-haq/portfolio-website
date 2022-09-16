@@ -114,12 +114,24 @@
   color: blue;
 }
 
+.nav-offcanvas {
+  padding: 0;
+  margin: -5px 5px 0px 0px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.nav-offcanvas-header {
+  color: black;
+}
+
 @media screen and (max-width: 768px) {
   .custom-nav-link:hover {
     background-color: rgba(210, 210, 210, 0.705);
   }
   .custom-navbar-collapse {
     margin-bottom: 10px;
+    display: none;
   }
   .custom-dark-mode {
     margin-right: 20px;

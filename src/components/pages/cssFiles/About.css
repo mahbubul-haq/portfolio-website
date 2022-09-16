@@ -23,15 +23,16 @@
   color: white;
   /* set background color to <a> tag default color */
   /*anchor tag default color" */
-  background-color: #1075e1;
-  border-radius: 3px;
-  height: 26px;
-  width: 26px;
+  background-color: #0d6efd;
+  border-radius: 4px;
+  height: 27px;
+  width: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 3px;
-  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  background-color: 0.1s ease-in-out;
 }
 .codeforces-icon-wrapper:hover {
   background-color: #0b67ca;
@@ -49,21 +50,21 @@
     font-size: 140%;
   }
   .about-institute {
-    font-size: 1.1rem;
+    font-size: 120%;
   }
   .about-work {
-    font-size: 1.1rem;
+    font-size: 120%;
   }
 }
 
 @media screen and (max-width: 576px) {
   .about-name {
-    font-size: 120%;
+    font-size: 130%;
   }
   .about-institute {
-    font-size: 100%;
+    font-size: 110%;
   }
   .about-work {
-    font-size: 100%;
+    font-size: 110%;
   }
 }

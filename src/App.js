@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MyNav from "./components/nav/Nav";
 
-import { default as About, default as Home } from './components/pages/Home';
+import About from './components/pages/About';
+import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
 import Resume from './components/pages/Resume';
 
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     let element = document.getElementsByClassName("custom-navbar");
@@ -19,20 +19,20 @@ function App() {
   });
 
   return (
-      <Container fluid className='p-0 container-background'>
-       
-        <Router>
+    <Container fluid className="p-0 container-background">
+      <Router>
+
           <MyNav />
+          
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<About/>} />
-            <Route exact path="/projects" element={<Projects/>} />
-            <Route exact path="/resume" element={<Resume/>} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/projects" element={<Projects />} />
+            <Route exact path="/resume" element={<Resume />} />
           </Routes>
-        </Router>
-
-         
-      </Container>
+        
+      </Router>
+    </Container>
   );
 }
 

@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import Stack from "react-bootstrap/Stack";
+import { BsXLg } from 'react-icons/bs';
 import { FaBars, FaMoon, FaSun } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +19,10 @@ const MyNav = () => {
     const [page, setPage] = useState(0);
     const [darkMode, setDarkMode] = useState(false);
     const navigate = useNavigate();
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     useEffect(() => {
       if (darkMode) {
@@ -95,7 +102,7 @@ const MyNav = () => {
     useEffect(() => {
       let element = document.getElementsByClassName("custom-nav-link");
       for (let i = 0; i < element.length; i++) {
-        if (i + 1 === page) {
+        if (i === page) {
           element[i].classList.add("current-page");
         }
         else {
@@ -126,14 +133,30 @@ const MyNav = () => {
             className="custom-navbar-toggle order-3"
             aria-controls="basic-navbar-nav"
           >
-            <FaBars className="custom-navbar-toggle-icon" size={25} />
+            <FaBars
+              className="custom-navbar-toggle-icon"
+              size={25}
+              onClick={() => {
+                handleShow();
+              }}
+            />
           </Navbar.Toggle>
 
           <Navbar.Collapse
-            className="custom-navbar-collapse ms-auto order-md-1 order-5"
+            className="custom-navbar-collapse ms-auto order-md-1 order-5 d-md-none"
             id="basic-navbar-nav"
           >
-            <Nav className="text-center m-md-auto custom-nav">
+            <Nav className="text-center m-md-auto custom-nav ">
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(0);
+                  navigate("/");
+                }}
+              >
+                Home
+              </Nav.Link>
               <Nav.Link
                 className="custom-nav-link"
                 role="button"
@@ -192,6 +215,78 @@ const MyNav = () => {
           </Nav.Link>
         </Container>
       </Navbar>
+
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        placement={"end"}
+        className="nav-offcanvas"
+      >
+        <Offcanvas.Header className="nav-offcanvas-header">
+          <Offcanvas.Title>Mahbubul Haque</Offcanvas.Title>
+          <BsXLg
+            onClick={() => {
+              handleClose();
+            }}
+          />
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Nav className="text-center m-md-auto custom-nav ">
+            <Stack>
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(0);
+                  navigate("/");
+                }}
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(1);
+                  navigate("/about");
+                }}
+              >
+                About
+              </Nav.Link>
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(2);
+                  navigate("/projects");
+                }}
+              >
+                Projects
+              </Nav.Link>
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(3);
+                  navigate("/resume");
+                }}
+              >
+                Resume
+              </Nav.Link>
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(4);
+                  navigate("/contact");
+                }}
+              >
+                Contact
+              </Nav.Link>
+            </Stack>
+          </Nav>
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 };

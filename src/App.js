@@ -6,9 +6,11 @@ import MyNav from "./components/nav/Nav";
 
 import DarkModeState from './components/context/DarkModeState';
 import About from './components/pages/About';
+import Experience from './components/pages/Experience';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
 import Resume from './components/pages/Resume';
+import Skills from './components/pages/Skills';
 
 
 
@@ -30,6 +32,8 @@ function App() {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/projects" element={<Projects />} />
             <Route exact path="/resume" element={<Resume />} />
+            <Route exact path="/skills" element={<Skills />} />
+            <Route exact path="/experience" element={<Experience />} />
           </Routes>
         </Router>
       </DarkModeState>

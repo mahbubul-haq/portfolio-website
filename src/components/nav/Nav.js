@@ -89,6 +89,17 @@ const MyNav = () => {
                       onClick={() => {
                         setPage(2);
                         setShowColor(!showColor);
+                        navigate("/skills");
+                      }}
+                    >
+                      Skills
+                    </Nav.Link>
+                    <Nav.Link
+                      className={"custom-nav-link1 " + class_name}
+                      role="button"
+                      onClick={() => {
+                        setPage(3);
+                        setShowColor(!showColor);
                         navigate("/projects");
                       }}
                     >
@@ -98,7 +109,18 @@ const MyNav = () => {
                       className={"custom-nav-link1 " + class_name}
                       role="button"
                       onClick={() => {
-                        setPage(3);
+                        setPage(4);
+                        setShowColor(!showColor);
+                        navigate("/experience");
+                      }}
+                    >
+                      Experience
+                    </Nav.Link>
+                    <Nav.Link
+                      className={"custom-nav-link1 " + class_name}
+                      role="button"
+                      onClick={() => {
+                        setPage(5);
                         setShowColor(!showColor);
                         navigate("/resume");
                       }}
@@ -109,7 +131,7 @@ const MyNav = () => {
                       className={"custom-nav-link1 " + class_name}
                       role="button"
                       onClick={() => {
-                        setPage(4);
+                        setPage(6);
                         setShowColor(!showColor);
                         navigate("/contact");
                       }}
@@ -242,7 +264,7 @@ const MyNav = () => {
             }}
           >
             {/* <img src="images/logo_transparent.png" className="img-fluid" style={{width:"45px", height:"45px", margin:"-4px 0px -4px 0", padding: "0"}} alt="logo" /> */}
-            <span className="navbar-brand-name d-none d-md-block">
+            <span  className="navbar-brand-name d-none d-sm-block d-md-none d-lg-block">
               Mahbubul Haque
             </span>
             {/* <span className="nav-logo badge pill">M</span>
@@ -291,6 +313,16 @@ const MyNav = () => {
                 role="button"
                 onClick={() => {
                   setPage(2);
+                  navigate("/skills");
+                }}
+              >
+                Skills
+              </Nav.Link>
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(3);
                   navigate("/projects");
                 }}
               >
@@ -300,7 +332,17 @@ const MyNav = () => {
                 className="custom-nav-link"
                 role="button"
                 onClick={() => {
-                  setPage(3);
+                  setPage(4);
+                  navigate("/experience");
+                }}
+              >
+                Experience
+              </Nav.Link>
+              <Nav.Link
+                className="custom-nav-link"
+                role="button"
+                onClick={() => {
+                  setPage(5);
                   navigate("/resume");
                 }}
               >
@@ -310,7 +352,7 @@ const MyNav = () => {
                 className="custom-nav-link"
                 role="button"
                 onClick={() => {
-                  setPage(4);
+                  setPage(6);
                   navigate("/contact");
                 }}
               >

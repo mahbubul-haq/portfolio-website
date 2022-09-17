@@ -47,6 +47,30 @@
   transition: none;
 }
 
+.custom-a {
+  text-decoration: none;
+}
+.custom-a:hover {
+  text-decoration: underline;
+}
+.paragraph-decoration {
+  text-align: justify;
+}
+.paragraph-decoration div {
+  /* set hyphen auto */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+}
+.common-container {
+  max-width: 900px;
+  height: 100%;
+  margin-top: -52px;
+  max-width: 900px;
+  padding: 72px 20px 0px 20px;
+}
+
 @media screen and (max-width: 768px) {
   .profile-picture {
     width: 100px;

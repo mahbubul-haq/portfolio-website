@@ -8,6 +8,7 @@ import Stack from "react-bootstrap/Stack";
 import { BsXLg } from 'react-icons/bs';
 import { FaBars, FaMoon, FaSun } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 
 import "./Nav.css";
@@ -17,12 +18,112 @@ import "./Nav.css";
 
 const MyNav = () => {
     const [page, setPage] = useState(0);
-    const [darkMode, setDarkMode] = useState(false);
+    const [showColor, setShowColor] = useState(false);
+    const {darkMode, setDarkMode} = React.useContext(DarkModeContext);
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+      setShow(true);
+      setTimeout(() => { setShowColor(!showColor); }, 100);
+      setTimeout( ()=> setShowColor(!showColor), 300)  ;
+    }
+
+    const getOffCanvas = () => {
+        let color="black", backgroundColor = "white", class_name="";
+        if (darkMode) {
+          color = "rgba(255, 255, 255, 0.9)";
+          backgroundColor = "#222430";
+          class_name = "nav-offcanvas-dark-header"
+        }
+
+        return (
+          <>
+            <Offcanvas
+              show={show}
+              onHide={handleClose}
+              placement={"end"}
+              className="nav-offcanvas"
+              style={{ color: color, backgroundColor: backgroundColor }}
+            >
+              <Offcanvas.Header
+                className="nav-offcanvas-header"
+                style={{ color: color }}
+              >
+                <Offcanvas.Title>Mahbubul Haque</Offcanvas.Title>
+                <BsXLg
+                  onClick={() => {
+                    handleClose();
+                  }}
+                />
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="text-center m-md-auto custom-nav ">
+                  <Stack>
+                    <Nav.Link
+                      className={"custom-nav-link1 " + class_name}
+                      role="button"
+                      onClick={() => {
+                        setPage(0);
+                        setShowColor(!showColor);
+                        navigate("/");
+                      }}
+                    >
+                      Home
+                    </Nav.Link>
+                    <Nav.Link
+                      className={"custom-nav-link1 " + class_name}
+                      role="button"
+                      onClick={() => {
+                        setPage(1);
+                        setShowColor(!showColor);
+                        navigate("/about");
+                      }}
+                    >
+                      About
+                    </Nav.Link>
+                    <Nav.Link
+                      className={"custom-nav-link1 " + class_name}
+                      role="button"
+                      onClick={() => {
+                        setPage(2);
+                        setShowColor(!showColor);
+                        navigate("/projects");
+                      }}
+                    >
+                      Projects
+                    </Nav.Link>
+                    <Nav.Link
+                      className={"custom-nav-link1 " + class_name}
+                      role="button"
+                      onClick={() => {
+                        setPage(3);
+                        setShowColor(!showColor);
+                        navigate("/resume");
+                      }}
+                    >
+                      Resume
+                    </Nav.Link>
+                    <Nav.Link
+                      className={"custom-nav-link1 " + class_name}
+                      role="button"
+                      onClick={() => {
+                        setPage(4);
+                        setShowColor(!showColor);
+                        navigate("/contact");
+                      }}
+                    >
+                      Contact
+                    </Nav.Link>
+                  </Stack>
+                </Nav>
+              </Offcanvas.Body>
+            </Offcanvas>
+          </>
+        );
+      
+    }
 
     useEffect(() => {
       if (darkMode) {
@@ -90,9 +191,11 @@ const MyNav = () => {
             if (element && element.length > 0) {
               element[0].classList.remove("color-white");
             }
-
+            
             element = document.getElementsByClassName("codeforces-icon-wrapper");
+            console.log(element);
             if (element && element.length > 0) {
+              element[0].classList.remove("codeforces-icon-wrapper-dark1");
               element[0].classList.remove("codeforces-icon-wrapper-dark");
             }
 
@@ -101,6 +204,7 @@ const MyNav = () => {
 
     useEffect(() => {
       let element = document.getElementsByClassName("custom-nav-link");
+      console.log(element);
       for (let i = 0; i < element.length; i++) {
         if (i === page) {
           element[i].classList.add("current-page");
@@ -110,6 +214,19 @@ const MyNav = () => {
         }
       }
     }, [page]);
+
+    useEffect(() => {
+      let element = document.getElementsByClassName("custom-nav-link1");
+      console.log(element);
+      for (let i = 0; i < element.length; i++) {
+        if (i === page) {
+          element[i].classList.add("current-page");
+        }
+        else {
+          element[i].classList.remove("current-page");
+        }
+      }
+    }, [showColor]);
 
   return (
     <>
@@ -125,7 +242,9 @@ const MyNav = () => {
             }}
           >
             {/* <img src="images/logo_transparent.png" className="img-fluid" style={{width:"45px", height:"45px", margin:"-4px 0px -4px 0", padding: "0"}} alt="logo" /> */}
-            <span className="navbar-brand-name">Mahbubul Haque</span>
+            <span className="navbar-brand-name d-none d-md-block">
+              Mahbubul Haque
+            </span>
             {/* <span className="nav-logo badge pill">M</span>
             <Badge variant="info" className="nav-logo">M</Badge> */}
           </Navbar.Brand>
@@ -215,78 +334,7 @@ const MyNav = () => {
           </Nav.Link>
         </Container>
       </Navbar>
-
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        placement={"end"}
-        className="nav-offcanvas"
-      >
-        <Offcanvas.Header className="nav-offcanvas-header">
-          <Offcanvas.Title>Mahbubul Haque</Offcanvas.Title>
-          <BsXLg
-            onClick={() => {
-              handleClose();
-            }}
-          />
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Nav className="text-center m-md-auto custom-nav ">
-            <Stack>
-              <Nav.Link
-                className="custom-nav-link"
-                role="button"
-                onClick={() => {
-                  setPage(0);
-                  navigate("/");
-                }}
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                className="custom-nav-link"
-                role="button"
-                onClick={() => {
-                  setPage(1);
-                  navigate("/about");
-                }}
-              >
-                About
-              </Nav.Link>
-              <Nav.Link
-                className="custom-nav-link"
-                role="button"
-                onClick={() => {
-                  setPage(2);
-                  navigate("/projects");
-                }}
-              >
-                Projects
-              </Nav.Link>
-              <Nav.Link
-                className="custom-nav-link"
-                role="button"
-                onClick={() => {
-                  setPage(3);
-                  navigate("/resume");
-                }}
-              >
-                Resume
-              </Nav.Link>
-              <Nav.Link
-                className="custom-nav-link"
-                role="button"
-                onClick={() => {
-                  setPage(4);
-                  navigate("/contact");
-                }}
-              >
-                Contact
-              </Nav.Link>
-            </Stack>
-          </Nav>
-        </Offcanvas.Body>
-      </Offcanvas>
+      {getOffCanvas()}
     </>
   );
 };

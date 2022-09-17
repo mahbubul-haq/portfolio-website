@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MyNav from "./components/nav/Nav";
 
+import DarkModeState from './components/context/DarkModeState';
 import About from './components/pages/About';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
@@ -20,18 +21,18 @@ function App() {
 
   return (
     <Container fluid className="p-0 container-background">
-      <Router>
-
+      <DarkModeState>
+        <Router>
           <MyNav />
-          
+
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/projects" element={<Projects />} />
             <Route exact path="/resume" element={<Resume />} />
           </Routes>
-        
-      </Router>
+        </Router>
+      </DarkModeState>
     </Container>
   );
 }

@@ -3,6 +3,8 @@
   /* set dark mode background color and color */
   --dark-mode-background-color: #1e1e1e;
   --dark-mode-color: #f5f5f5;
+  --gray-1: #212539;
+  --dark-mode-navbar-bg: #202430;
 }
 
 * {

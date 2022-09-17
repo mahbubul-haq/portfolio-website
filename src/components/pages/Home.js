@@ -1,19 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { DarkModeContext } from "../context/DarkModeContext";
 import "../nav/Nav.css";
 import "./cssFiles/About.css";
 
 const Home = () => {
+  
+  const { darkMode } = React.useContext(DarkModeContext);
+  let element = document.getElementsByClassName("codeforces-icon-wrapper");
+
+  useEffect(() => {
+    console.log(element, "home");
+    if (darkMode) {
+      if (element && element.length > 0) {
+        element[0].classList.add("codeforces-icon-wrapper-dark1");
+      } else {
+        element[0].classList.remove("codeforces-icon-wrapper-dark1");
+      }
+    }
+    return () => {
+      console.log(element);
+      if (element && element.length > 0)
+        element[0].classList.remove("codeforces-icon-wrapper-dark1");
+    };
+}, []);
+
   return (
     <Container
       fluid
       className="basic-page-style d-flex align-items-center justify-content-center"
-      style={{height: "100%", marginTop: "-52px", paddingTop: "72px"}}
+      style={{ height: "100%", marginTop: "-52px", paddingTop: "72px" }}
     >
       <Row className="m-auto">
         <Col className="d-flex justify-content-center align-items-center">

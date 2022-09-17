@@ -11,10 +11,11 @@ import "./cssFiles/About.css";
 
 const Home = () => {
   
-  const { darkMode } = React.useContext(DarkModeContext);
+  const { darkMode, setPage} = React.useContext(DarkModeContext);
   let element = document.getElementsByClassName("codeforces-icon-wrapper");
 
   useEffect(() => {
+    setPage(0);
     console.log(element, "home");
     if (darkMode) {
       if (element && element.length > 0) {
@@ -34,7 +35,7 @@ const Home = () => {
     <Container
       fluid
       className="basic-page-style d-flex align-items-center justify-content-center"
-      style={{ height: "100%", marginTop: "-52px", paddingTop: "72px" }}
+      style={{ height: "100%", marginTop: "-52px", paddingTop: "72px", overflowX: "auto" }}
     >
       <Row className="m-auto">
         <Col className="d-flex justify-content-center align-items-center">

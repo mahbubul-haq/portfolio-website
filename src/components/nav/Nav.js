@@ -17,9 +17,8 @@ import "./Nav.css";
 
 
 const MyNav = () => {
-    const [page, setPage] = useState(0);
     const [showColor, setShowColor] = useState(false);
-    const {darkMode, setDarkMode} = React.useContext(DarkModeContext);
+    const {darkMode, setDarkMode, page, setPage} = React.useContext(DarkModeContext);
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
 
@@ -30,10 +29,12 @@ const MyNav = () => {
       setTimeout( ()=> setShowColor(!showColor), 300)  ;
     }
 
+    
+
     const getOffCanvas = () => {
         let color="black", backgroundColor = "white", class_name="";
         if (darkMode) {
-          color = "rgba(255, 255, 255, 0.9)";
+          color = "rgba(255, 255, 255, 0.85)";
           backgroundColor = "#222430";
           class_name = "nav-offcanvas-dark-header"
         }
@@ -55,6 +56,7 @@ const MyNav = () => {
                 <BsXLg
                   onClick={() => {
                     handleClose();
+                    
                   }}
                 />
               </Offcanvas.Header>
@@ -68,6 +70,7 @@ const MyNav = () => {
                         setPage(0);
                         setShowColor(!showColor);
                         navigate("/");
+                        handleClose();
                       }}
                     >
                       Home
@@ -79,6 +82,7 @@ const MyNav = () => {
                         setPage(1);
                         setShowColor(!showColor);
                         navigate("/about");
+                        handleClose();
                       }}
                     >
                       About
@@ -90,6 +94,7 @@ const MyNav = () => {
                         setPage(2);
                         setShowColor(!showColor);
                         navigate("/skills");
+                        handleClose();
                       }}
                     >
                       Skills
@@ -101,6 +106,7 @@ const MyNav = () => {
                         setPage(3);
                         setShowColor(!showColor);
                         navigate("/projects");
+                        handleClose();
                       }}
                     >
                       Projects
@@ -112,6 +118,7 @@ const MyNav = () => {
                         setPage(4);
                         setShowColor(!showColor);
                         navigate("/experience");
+                        handleClose();
                       }}
                     >
                       Experience
@@ -123,6 +130,7 @@ const MyNav = () => {
                         setPage(5);
                         setShowColor(!showColor);
                         navigate("/resume");
+                        handleClose();
                       }}
                     >
                       Resume
@@ -134,6 +142,7 @@ const MyNav = () => {
                         setPage(6);
                         setShowColor(!showColor);
                         navigate("/contact");
+                        handleClose();
                       }}
                     >
                       Contact
@@ -148,6 +157,7 @@ const MyNav = () => {
     }
 
     useEffect(() => {
+      
       if (darkMode) {
         let element = document.getElementsByClassName("container-background");
         if (element && element.length > 0) {
@@ -225,6 +235,7 @@ const MyNav = () => {
     }, [darkMode]);
 
     useEffect(() => {
+     
       let element = document.getElementsByClassName("custom-nav-link");
       console.log(element);
       for (let i = 0; i < element.length; i++) {

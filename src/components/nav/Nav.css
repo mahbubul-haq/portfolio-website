@@ -107,16 +107,16 @@
 .dark-mode-container {
   background-color: #121212;
   /* background-color: #141414; */
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.8);
 }
 .dark-mode-navbar {
   /* box shadwo below navbar */
   box-shadow: none;
   background-color: var(--dark-mode-navbar-bg);
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 }
 .color-white {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 }
 .color-black {
   color: black;

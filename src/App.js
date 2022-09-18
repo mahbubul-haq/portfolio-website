@@ -24,7 +24,7 @@ function App() {
   return (
     <Container fluid className="p-0 container-background">
       <DarkModeState>
-        <Router>
+        <Router basename='/mahbubul-haq.github.io'>
           <MyNav />
 
           <Routes>

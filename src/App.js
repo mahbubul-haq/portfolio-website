@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -13,16 +13,12 @@ import Resume from './components/pages/Resume';
 import Skills from './components/pages/Skills';
 
 
-
 function App() {
 
-  useEffect(() => {
-    let element = document.getElementsByClassName("custom-navbar");
-    console.log(element);
-  });
-
   return (
-    <Container fluid className="p-0 container-background">
+    
+    <Container fluid className={localStorage.getItem("darkMode") !== "true" ? 
+      "container-background p-0" : "container-background dark-mode-container p-0"}>
       <DarkModeState>
         <Router basename='/'>
           <MyNav />

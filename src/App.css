@@ -2,8 +2,6 @@
   background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 100%;
-  overflow: auto;
   color: black;
-  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
   max-width: 1500px;
 }

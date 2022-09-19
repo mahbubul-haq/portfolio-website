@@ -2,10 +2,11 @@
   /* background-color: rgba(71, 41, 41, 0.1); */
   /* add box shadow below navbar */
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
   color: rgb(0, 0, 0);
   padding: 6px 10px 6px 10px;
-  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out,
-    all 0.5s ease-in-out;
+  position: sticky;
+  top: 0;
 }
 
 .custom-navbar-navbar {
@@ -25,12 +26,10 @@
 .custom-nav-link1 {
   margin: 0px 10px 0px 10px;
   font-weight: 500;
-  transition: color 0.5s ease-in-out, all 0.5s ease-in-out;
 }
 
 .custom-navbar-brand {
   font-weight: 500;
-  transition: color 0.5s ease-in-out, all 0.5s ease-in-out;
   margin-left: 10px;
   min-height: 40px;
 }
@@ -83,7 +82,6 @@
   margin: 0 10px 0 0;
   padding: 0;
   color: black;
-  transition: color 0.3s ease-in-out;
 }
 .custom-navbar-toggle-icon:hover {
   color: rgb(27, 4, 203);
@@ -97,7 +95,6 @@
 
 .custom-dark-mode {
   margin-right: 10px;
-  transition: color 0.3s ease-in-out;
 }
 .custom-dark-mode:hover {
   cursor: pointer;

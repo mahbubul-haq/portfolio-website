@@ -16,6 +16,7 @@ const About = () => {
   }, []);
 
   return (
+    <div className="outer-container">
     <Container fluid className="common-container">
       <Row className="mt-2 mt-md-3 mt-lg-4 d-flex justify-content-center align-items-center">
         <Col>
@@ -55,6 +56,7 @@ const About = () => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 

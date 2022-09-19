@@ -31,8 +31,6 @@
   justify-content: center;
   align-items: center;
   padding-top: 3px;
-  transition: color 0.5s ease-in-out;
-  background-color: 0.1s ease-in-out;
 }
 .codeforces-icon-wrapper:hover {
   background-color: #0b67ca;
@@ -63,13 +61,19 @@
   -moz-hyphens: auto;
   -ms-hyphens: auto;
 }
-.common-container {
-  max-width: 900px;
+
+.outer-container {
+  width: 100%;
   height: 100%;
   margin-top: -52px;
+  text-align: center;
+  overflow: auto;
+}
+
+.common-container {
+  margin-top: 0;
   max-width: 900px;
   padding: 72px 20px 20px 20px;
-  overflow-y: auto;
 }
 
 @media screen and (max-width: 768px) {

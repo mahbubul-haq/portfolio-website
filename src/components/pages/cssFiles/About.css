@@ -54,6 +54,8 @@
 }
 .paragraph-decoration {
   text-align: justify;
+  font-size: 120%;
+  line-height: 1.5;
 }
 .paragraph-decoration div {
   /* set hyphen auto */
@@ -93,5 +95,8 @@
   }
   .about-work {
     font-size: 105%;
+  }
+  .paragraph-decoration {
+    font-size: 100%;
   }
 }

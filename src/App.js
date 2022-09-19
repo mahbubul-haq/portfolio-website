@@ -36,10 +36,11 @@ function App() {
         element.style.zIndex = "0";
       }
     };
-    document.getElementById("outer-container-scroll").addEventListener("scroll", onScroll);
+    let element1 = document.getElementById("outer-container-scroll");
+    if (element1) element1.addEventListener("scroll", onScroll);
     
     return () => {
-      document.getElementById("outer-container-scroll").removeEventListener("scroll", onScroll);
+      if (element1) element1.removeEventListener("scroll", onScroll);
       
     }
   });
@@ -63,9 +64,6 @@ function App() {
         <Router basename="/">
           <MyNav />
           <div className="outer-container" id="outer-container-scroll">
-            <div className="scroll-top" onClick={() => scrollTop()}>
-              <BiChevronUp className="fw-4" size={30} />
-            </div>
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/about" element={<About />} />
@@ -74,6 +72,9 @@ function App() {
               <Route exact path="/skills" element={<Skills />} />
               <Route exact path="/experience" element={<Experience />} />
             </Routes>
+            <div className="scroll-top" onClick={() => scrollTop()}>
+              <BiChevronUp className="fw-4" size={30} />
+            </div>
           </div>
         </Router>
       </DarkModeState>

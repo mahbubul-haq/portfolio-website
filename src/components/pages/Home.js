@@ -15,7 +15,7 @@ const Home = () => {
     <Container
       fluid
       className="basic-page-style d-flex align-items-center justify-content-center"
-      style={{padding:"72px 5px 50px 5px", overflowX: "auto" }}
+      style={{padding:"72px 5px 20px 5px", overflowX: "auto" }}
     >
       <Row className="m-auto">
         <Col className="d-flex justify-content-center align-items-center">

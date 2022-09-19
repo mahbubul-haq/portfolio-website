@@ -21,17 +21,18 @@
   position: fixed;
   bottom: 20px;
   right: 40px;
-  z-index: 99;
   font-size: 15px;
   border: none;
   outline: none;
   background-color: #0d6efd;
   color: white;
-  cursor: pointer;
+  cursor: default;
   padding: 5px;
   border-radius: 4px;
   font-weight: 400;
   transition: background-color 0.5s ease-in-out, opacity 0.5s linear;
+  opacity: 0;
+  z-index: 0;
 }
 
 .scroll-top:hover {

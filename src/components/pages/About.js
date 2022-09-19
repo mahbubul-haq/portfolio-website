@@ -8,13 +8,12 @@ import "./cssFiles/About.css";
 const About = () => {
 
   return (
-    
     <Container fluid className="common-container">
       <Row className="mt-2 mt-md-3 mt-lg-4 d-flex justify-content-center align-items-center">
         <Col>
           <Stack gap={2} className="paragraph-decoration">
             <div className="h2 text-center">About Me</div>
-            <div className="lh-base fs-6">
+            <div className="">
               Hi,
               <br></br>I am Mahbubul Haque, an undergraduate Computer Science
               and Engineering student at{" "}
@@ -41,14 +40,14 @@ const About = () => {
             </div>
             <div>
               {/*want to  pursue carear in web development, full time or part time remote job*/}
-              I am looking for a full-time or part-time <strong>remote job</strong>{" "} in Web Development. I am also open to internship
-              opportunities.
+              I am looking for a full-time or part-time{" "}
+              <strong>remote job</strong> in Web Development. I am also open to
+              internship opportunities.
             </div>
           </Stack>
         </Col>
       </Row>
     </Container>
-
   );
 };
 

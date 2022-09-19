@@ -105,6 +105,7 @@
   background-color: #121212;
   /* background-color: #141414; */
   color: rgba(255, 255, 255, 0.8);
+  z-index: -2;
 }
 .dark-mode-navbar {
   /* box shadwo below navbar */

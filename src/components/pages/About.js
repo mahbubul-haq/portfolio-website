@@ -1,22 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
-import { DarkModeContext } from "../context/DarkModeContext";
 import "./cssFiles/About.css";
 
 const About = () => {
 
-  const context = React.useContext(DarkModeContext);
-  const {setPage } = context;
-
-  useEffect(() => {
-    setPage(1);
-  }, []);
-
   return (
-    <div className="outer-container">
+    
     <Container fluid className="common-container">
       <Row className="mt-2 mt-md-3 mt-lg-4 d-flex justify-content-center align-items-center">
         <Col>
@@ -56,7 +48,7 @@ const About = () => {
         </Col>
       </Row>
     </Container>
-    </div>
+
   );
 };
 

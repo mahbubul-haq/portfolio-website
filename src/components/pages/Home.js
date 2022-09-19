@@ -5,24 +5,22 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { DarkModeContext } from "../context/DarkModeContext";
 import "../nav/Nav.css";
 import "./cssFiles/About.css";
 
 const Home = () => {
   
-  const { darkMode, setPage} = React.useContext(DarkModeContext);
   return (
     
     <Container
       fluid
       className="basic-page-style d-flex align-items-center justify-content-center"
-      style={{ height: "100%", marginTop: "-52px", paddingTop: "72px", overflowX: "auto" }}
+      style={{padding:"72px 5px 50px 5px", overflowX: "auto" }}
     >
       <Row className="m-auto">
         <Col className="d-flex justify-content-center align-items-center">
           <Stack className="text-center" gap={1}>
-            <div className="mb-2">
+            <div className="mb-3">
               <Image
                 fluid
                 rounded
@@ -33,7 +31,7 @@ const Home = () => {
                 alt="Profile Picture"
               />
             </div>
-            <div className="h3 about-name mb-1">Mahbubul Haque</div>
+            <div className="h3 about-name mb-2">Mahbubul Haque</div>
             <div className="about-institute">
               Computer Science and Engineering Student | BUET
             </div>

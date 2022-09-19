@@ -4,4 +4,45 @@
   width: 100%;
   color: black;
   max-width: 1500px;
+  z-index: -2;
+}
+
+.outer-container {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  margin-top: -52px;
+  text-align: center;
+  overflow: auto;
+}
+
+.scroll-top {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: #0d6efd;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 400;
+  transition: background-color 0.5s ease-in-out, opacity 0.5s linear;
+}
+
+.scroll-top:hover {
+  background-color: rgb(52, 52, 181);
+}
+
+@media screen and (max-width: 576px) {
+  .scroll-top {
+    font-size: 10px;
+    bottom: 20px;
+    right: 20px;
+    padding: 0px;
+  }
 }

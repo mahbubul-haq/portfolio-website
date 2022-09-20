@@ -71,6 +71,23 @@
   padding: 72px 20px 30px 20px;
 }
 
+.button-link {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  cursor: pointer;
+  /* anchor link color */
+  color: #0d6efd;
+  text-decoration: underline;
+  display: inline-block;
+  line-height: 100%;
+  font-weight: 600;
+}
+.button-link:hover {
+  background-color: rgb(167, 58, 122);
+  color: white;
+}
+
 @media screen and (max-width: 768px) {
   .profile-picture {
     width: 100px;

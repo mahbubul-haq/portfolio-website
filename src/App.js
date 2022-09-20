@@ -47,7 +47,8 @@ function App() {
 
   const scrollTop = () => {
     document.body.scrollTop = 0;
-    document.getElementById("outer-container-scroll").scrollTop = 0;
+    let element1 = document.getElementById("outer-container-scroll");
+    if (element1) element1.scrollTop = 0;
 
   };
 

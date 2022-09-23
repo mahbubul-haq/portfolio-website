@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import { BiTime } from "react-icons/bi";
 import { lastUpdated, skillsData } from "../../data";
+import { DarkModeContext } from "../context/DarkModeContext";
 import "./cssFiles/About.css";
 
 const Skills = () => {
   const [progress, setProgress] = React.useState(true);
+
+  const { setPage } = React.useContext(DarkModeContext);
+
+  useEffect(() => {
+    setPage(2);
+  }, []);
+
   return (
     <Container fluid className="common-container">
       <Row className="common-toogle-progress">

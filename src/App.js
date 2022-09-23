@@ -7,6 +7,7 @@ import MyNav from "./components/nav/Nav";
 import { BiChevronUp } from "react-icons/bi";
 import DarkModeState from "./components/context/DarkModeState";
 import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
 import Experience from "./components/pages/Experience";
 import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
@@ -72,6 +73,7 @@ function App() {
               <Route exact path="/resume" element={<Resume />} />
               <Route exact path="/skills" element={<Skills />} />
               <Route exact path="/experience" element={<Experience />} />
+              <Route exact path="/contact" element={<Contact />} />
             </Routes>
             <div className="scroll-top" onClick={() => scrollTop()}>
               <BiChevronUp className="fw-4" size={30} />

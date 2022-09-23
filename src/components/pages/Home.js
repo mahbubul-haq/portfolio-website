@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { DarkModeContext } from "../context/DarkModeContext";
 import "../nav/Nav.css";
 import "./cssFiles/About.css";
 
 const Home = () => {
+
+  const {setPage} = React.useContext(DarkModeContext);
+
+  useEffect(() => {
+    setPage(0);
+  }, []);
   
   return (
     

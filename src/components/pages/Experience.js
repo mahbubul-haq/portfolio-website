@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Badge from "react-bootstrap/Badge";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -6,12 +7,19 @@ import Table from "react-bootstrap/Table";
 import { BiTime } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { lastUpdated, problemSolvingData } from "../../data";
+import { DarkModeContext } from "../context/DarkModeContext";
 import "./cssFiles/About.css";
 
 const Experience = () => {
   const [isSolve, setIsSolve] = React.useState(false);
+  const {setPage} = React.useContext(DarkModeContext);
+  const {darkMode} = React.useContext(DarkModeContext);
 
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    setPage(4);
+  }, []);
 
   useEffect(() => {
     let element1 = document.getElementById("problem-solving");
@@ -38,8 +46,8 @@ const Experience = () => {
           <div className="h4 fw-semibold">Problem Solving</div>
           <div className="mt-3 mb-1" style={{ textAlign: "justify" }}>
             I was an avid learner of Algorithms and Data Structures, Mathematics
-            and Problem solving strategies. I have solved more than 1500+
-            problems on various platforms.{" "}
+            and Problem solving strategies. I have solved 1500+ problems on
+            various platforms.{" "}
             <span
               className="button-link"
               onClick={() => {
@@ -49,7 +57,16 @@ const Experience = () => {
             >
               {isSolve ? "Hide" : "View"}
             </span>{" "}
-            my problem solving stats.
+            my problem solving stats. Also, see my{" "}
+            <a
+              className="button-link"
+              href="https://github.com/mahbubul-haq/ImplementedAlgorithms"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              Algorithm Learning
+            </a>{" "}
+            in GitHub.
           </div>
           <div
             style={{
@@ -63,7 +80,7 @@ const Experience = () => {
               className="text-center"
               striped
               bordered
-              variant="dark"
+              variant={darkMode ? "dark" : "light"}
               size="sm"
               id="problem-solving-table"
             >
@@ -112,7 +129,7 @@ const Experience = () => {
                   id="last-updated"
                   variant="light"
                 >
-                  <BiTime className="mb-0" /> Last Updated: {lastUpdated}
+                  <BiTime className="mb-1" /> Last Updated: {lastUpdated}
                 </div>
               </caption>
             </Table>
@@ -122,19 +139,20 @@ const Experience = () => {
         <Col xs={12} className="mt-3 text-start paragraph-decoration">
           <div className="h4 fw-semibold">Project Works</div>
           <div className="mt-3 mb-1" style={{ textAlign: "justify" }}>
-            I have worked on some interesting projects. I have worked on both individual and 
-            group projects.
-            I have quite a good experience of working with a team. See my proejcts <span
+            I have worked on some interesting projects. I have experience of
+            working on both individual and team projects. See my proejcts{" "}
+            <span
               className="button-link"
               onClick={() => {
-                localStorage.setItem("page", 3);
+                setPage(3);
                 navigate("/projects");
                 console.log("changed", isSolve);
               }}
-            >here</span>
+            >
+              here
+            </span>
           </div>
         </Col>
-
 
         <Col xs={12} className="paragraph-decoration">
           <div className="h4 fw-semibold mt-3 text-start">Teaching</div>
@@ -142,22 +160,33 @@ const Experience = () => {
             {/* /* teaching computer science students of University in Bangladesh and abroad
             topics like Data Structures, Algorithms, C, C++, Java, Python, Problem solving,
             Discrete math etc.  */}
-            I have experience in teaching computer science students of
+            I have experience in teaching Computer Science students of
             Universities in Bangladesh and abroad. I have tutored the following
-            topics both offline and online.
-            <div className="d-flex align-items-center justify-content-center ">
-              <ul className="m-auto">
-                <li className="text-center">Data Structures</li>
-                <li>C Programming</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>Data Structures</li>
-                <li>Algorithms</li>
-                <li>Problem-Solving</li>
-                <li>Discrete Math</li>
-              </ul>
-            </div>
+            topics both offline and online:{" "}
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              C Programming
+            </Badge>
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              C++
+            </Badge>
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              Python
+            </Badge>
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              Java
+            </Badge>
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              Data Structures
+            </Badge>
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              Algorithms
+            </Badge>
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              Problem-Solving
+            </Badge>
+            <Badge className="me-2 mb-1" pill bg="primary" text="light">
+              Discrete Math
+            </Badge>
           </div>
         </Col>
       </Row>

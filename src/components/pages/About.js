@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
+import { DarkModeContext } from "../context/DarkModeContext";
 import "./cssFiles/About.css";
 
 const About = () => {
+
+  const { setPage } = React.useContext(DarkModeContext);
+
+  useEffect(() => {
+    setPage(1);
+  }, []);
 
   return (
     <Container fluid className="common-container">

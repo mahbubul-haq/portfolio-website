@@ -20,30 +20,7 @@
   font-weight: 500;
 }
 
-.codeforces-icon-wrapper {
-  color: white;
-  /* set background color to <a> tag default color */
-  /*anchor tag default color" */
-  background-color: #0d6efd;
-  border-radius: 4px;
-  height: 27px;
-  width: 27px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3px;
-}
-.codeforces-icon-wrapper:hover {
-  background-color: #0b67ca;
-}
-
-.codeforces-icon-wrapper-dark {
-  color: #121212;
-}
-
-.codeforces-icon-wrapper-dark1 {
-  color: #121212;
-  transition: none;
+.home-link {
 }
 
 .custom-a {
@@ -66,9 +43,70 @@
 }
 
 .common-container {
-  margin-top: 0;
+  margin: 0px auto 0 auto;
   max-width: 900px;
-  padding: 72px 20px 30px 20px;
+  padding: 20px 20px 30px 20px;
+  /* border: 2px solid red; */
+}
+.home-link {
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.home-github,
+.home-linkedin,
+.home-facebook,
+.home-codeforces {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.home-github:hover,
+.home-linkedin:hover,
+.home-facebook:hover,
+.home-codeforces:hover {
+  /* hover effect dark background*/
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.home-facebook {
+  background-color: #3b5998;
+}
+
+.home-github {
+  background-color: #333;
+}
+
+.home-linkedin {
+  background-color: #0077b5;
+}
+
+.home-codeforces {
+  background-color: #1f8dd6;
+}
+
+.vertically-centered {
+  margin-top: -70px;
+  height: 100%;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .button-link {

@@ -61,11 +61,13 @@ function App() {
           ? "container-background p-0"
           : "container-background dark-mode-container p-0"
       }
+      
     >
       <DarkModeState>
         <Router basename="/">
-          <MyNav />
+         
           <div className="outer-container" id="outer-container-scroll">
+            <MyNav/>
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/about" element={<About />} />

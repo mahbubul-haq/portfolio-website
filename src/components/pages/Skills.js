@@ -11,7 +11,7 @@ import "./cssFiles/About.css";
 const Skills = () => {
   const [progress, setProgress] = React.useState(true);
 
-  const { setPage } = React.useContext(DarkModeContext);
+  const { setPage, darkMode } = React.useContext(DarkModeContext);
 
   useEffect(() => {
     setPage(2);
@@ -43,12 +43,21 @@ const Skills = () => {
       <Row className="mt-1 d-flex justify-content-center align-items-center">
         <Col>
           <Stack gap={2} className="paragraph-decoration">
-            <div className="h2 text-center">My Skills</div>
+            <div
+              className={"h2 text-center" + (darkMode ? " color-primary" : "")}
+            >
+              My Skills
+            </div>
             <div className="container-fluid p-0">
               {skillsData.map((skill, index) => {
                 return (
                   <div className="row gx-1 gy-0 mb-4" key={index}>
-                    <div className="col-12 h4 fw-semibold">
+                    <div
+                      className={
+                        "col-12 h4 fw-semibold" +
+                        (darkMode ? " color-primary" : "")
+                      }
+                    >
                       {skill.skillType}
                     </div>
                     {skill.list.map((current, index1) => {
@@ -101,7 +110,7 @@ const Skills = () => {
               })}
             </div>
             <div className="text-start fs-6 opacity-75 mb-4">
-              <BiTime className="mb-1"/> Last Updated: {lastUpdated}
+              <BiTime className="mb-1" /> Last Updated: {lastUpdated}
             </div>
           </Stack>
         </Col>

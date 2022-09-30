@@ -28,8 +28,8 @@ const MyNav = () => {
       backgroundColor = "white",
       class_name = "";
     if (darkMode) {
-      color = "rgba(255, 255, 255, 0.85)";
-      backgroundColor = "#222430";
+      color = "#e4e6eb";
+      backgroundColor = "#242526";
       class_name = "nav-offcanvas-dark-header";
     }
 
@@ -54,7 +54,7 @@ const MyNav = () => {
             />
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="text-center m-md-auto custom-nav ">
+            <Nav className="text-start m-md-auto custom-nav ">
               <Stack>
                 <Nav.Link
                   className={
@@ -189,22 +189,19 @@ const MyNav = () => {
 
       element = document.getElementsByClassName("custom-navbar-brand");
       if (element && element.length > 0) {
-        element[0].classList.add("color-white");
+        element[0].classList.add("color-primary");
       }
       element = document.getElementsByClassName("custom-nav-link");
       //for each on every element in element
       for (let i = 0; i < element.length; i++) {
-        element[i].classList.add("color-white");
+        element[i].classList.add("color-primary");
       }
       element = document.getElementsByClassName("custom-navbar-toggle-icon");
       if (element && element.length > 0) {
-        element[0].classList.add("color-white");
+        element[0].classList.add("color-primary");
       }
 
-      element = document.getElementsByClassName("codeforces-icon-wrapper");
-      if (element && element.length > 0) {
-        element[0].classList.add("codeforces-icon-wrapper-dark");
-      }
+  
     } else {
       let element = document.getElementsByClassName("container-background");
       if (element && element.length > 0) {
@@ -217,29 +214,23 @@ const MyNav = () => {
 
       element = document.getElementsByClassName("custom-navbar-brand");
       if (element && element.length > 0) {
-        element[0].classList.remove("color-white");
+        element[0].classList.remove("color-primary");
       }
       element = document.getElementsByClassName("custom-nav-link");
       if (element && element.length > 0) {
-        element[0].classList.remove("color-white");
+        element[0].classList.remove("color-primary");
       }
       element = document.getElementsByClassName("custom-nav-link");
       //for each on every element in element
       for (let i = 0; i < element.length; i++) {
-        element[i].classList.remove("color-white");
+        element[i].classList.remove("color-primary");
       }
 
       element = document.getElementsByClassName("custom-navbar-toggle-icon");
       if (element && element.length > 0) {
-        element[0].classList.remove("color-white");
+        element[0].classList.remove("color-primary");
       }
 
-      element = document.getElementsByClassName("codeforces-icon-wrapper");
-      console.log(element);
-      if (element && element.length > 0) {
-        element[0].classList.remove("codeforces-icon-wrapper-dark1");
-        element[0].classList.remove("codeforces-icon-wrapper-dark");
-      }
     }
   }, [darkMode]);
 
@@ -257,7 +248,7 @@ const MyNav = () => {
           <Navbar.Brand
             className={
               localStorage.getItem("darkMode") === "true"
-                ? "custom-navbar-brand color-white"
+                ? "custom-navbar-brand color-primary"
                 : "custom-navbar-brand"
             }
             role="button"
@@ -281,7 +272,7 @@ const MyNav = () => {
             <FaBars
               className={
                 localStorage.getItem("darkMode") === "true"
-                  ? "custom-navbar-toggle-icon color-white"
+                  ? "custom-navbar-toggle-icon color-primary"
                   : "custom-navbar-toggle-icon"
               }
               size={25}
@@ -299,7 +290,7 @@ const MyNav = () => {
               <Nav.Link
                 className={
                   (localStorage.getItem("darkMode") === "true"
-                    ? "custom-nav-link color-white"
+                    ? "custom-nav-link color-primary"
                     : "custom-nav-link") + (page === 0 ? " current-page" : "")
                 }
                 role="button"
@@ -313,7 +304,7 @@ const MyNav = () => {
               <Nav.Link
                 className={
                   (localStorage.getItem("darkMode") === "true"
-                    ? "custom-nav-link color-white"
+                    ? "custom-nav-link color-primary"
                     : "custom-nav-link") + (page === 1 ? " current-page" : "")
                 }
                 role="button"
@@ -327,7 +318,7 @@ const MyNav = () => {
               <Nav.Link
                 className={
                   (localStorage.getItem("darkMode") === "true"
-                    ? "custom-nav-link color-white"
+                    ? "custom-nav-link color-primary"
                     : "custom-nav-link") + (page === 2 ? " current-page" : "")
                 }
                 role="button"
@@ -341,7 +332,7 @@ const MyNav = () => {
               <Nav.Link
                 className={
                   (localStorage.getItem("darkMode") === "true"
-                    ? "custom-nav-link color-white"
+                    ? "custom-nav-link color-primary"
                     : "custom-nav-link") + (page === 3 ? " current-page" : "")
                 }
                 role="button"
@@ -355,7 +346,7 @@ const MyNav = () => {
               <Nav.Link
                 className={
                   (localStorage.getItem("darkMode") === "true"
-                    ? "custom-nav-link color-white"
+                    ? "custom-nav-link color-primary"
                     : "custom-nav-link") + (page === 4 ? " current-page" : "")
                 }
                 role="button"
@@ -369,7 +360,7 @@ const MyNav = () => {
               <Nav.Link
                 className={
                   (localStorage.getItem("darkMode") === "true"
-                    ? "custom-nav-link color-white"
+                    ? "custom-nav-link color-primary"
                     : "custom-nav-link") + (page === 5 ? " current-page" : "")
                 }
                 role="button"
@@ -383,7 +374,7 @@ const MyNav = () => {
               <Nav.Link
                 className={
                   (localStorage.getItem("darkMode") === "true"
-                    ? "custom-nav-link color-white"
+                    ? "custom-nav-link color-primary"
                     : "custom-nav-link") + (page === 6 ? " current-page" : "")
                 }
                 role="button"

@@ -38,12 +38,20 @@ const Experience = () => {
 
   return (
     <Container fluid className="common-container">
-      <Row className="mt-1">
+      <Row className="mt-2 mt-md-3 mt-lg-4">
         <Col xs={12}>
-          <div className="h2 text-center">My Experience</div>
+          <div
+            className={"h2 text-center" + (darkMode ? " color-primary" : "")}
+          >
+            My Experience
+          </div>
         </Col>
         <Col xs={12} className="mt-4 text-start paragraph-decoration">
-          <div className="h4 fw-semibold">Problem Solving</div>
+          <div
+            className={"h4 fw-semibold" + (darkMode ? " color-primary" : "")}
+          >
+            Problem Solving
+          </div>
           <div className="mt-3 mb-1" style={{ textAlign: "justify" }}>
             I was an avid learner of Algorithms and Data Structures, Mathematics
             and Problem solving strategies. I have solved 1500+ problems on
@@ -137,10 +145,14 @@ const Experience = () => {
         </Col>
 
         <Col xs={12} className="mt-3 text-start paragraph-decoration">
-          <div className="h4 fw-semibold">Project Works</div>
+          <div
+            className={"h4 fw-semibold" + (darkMode ? " color-primary" : "")}
+          >
+            Project Works
+          </div>
           <div className="mt-3 mb-1" style={{ textAlign: "justify" }}>
             I have worked on some interesting projects. I have experience of
-            working on both individual and team projects. See my proejcts{" "}
+            working on both individual and team projects. Check out my{" "}
             <span
               className="button-link"
               onClick={() => {
@@ -149,13 +161,21 @@ const Experience = () => {
                 console.log("changed", isSolve);
               }}
             >
-              here
+              projects
             </span>
+            .
           </div>
         </Col>
 
         <Col xs={12} className="paragraph-decoration">
-          <div className="h4 fw-semibold mt-3 text-start">Teaching</div>
+          <div
+            className={
+              "h4 fw-semibold mt-3 text-start" +
+              (darkMode ? " color-primary" : "")
+            }
+          >
+            Teaching
+          </div>
           <div className="mt-3 mb-1" style={{ textAlign: "justify" }}>
             {/* /* teaching computer science students of University in Bangladesh and abroad
             topics like Data Structures, Algorithms, C, C++, Java, Python, Problem solving,

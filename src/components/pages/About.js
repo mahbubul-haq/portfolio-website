@@ -8,7 +8,7 @@ import "./cssFiles/About.css";
 
 const About = () => {
 
-  const { setPage } = React.useContext(DarkModeContext);
+  const { setPage, darkMode } = React.useContext(DarkModeContext);
 
   useEffect(() => {
     setPage(1);
@@ -16,10 +16,10 @@ const About = () => {
 
   return (
     <Container fluid className="common-container">
-      <Row className="mt-2 mt-md-3 mt-lg-4 d-flex justify-content-center align-items-center">
+      <Row className="mt-2 mt-md-3 mt-lg-4">
         <Col>
           <Stack gap={2} className="paragraph-decoration">
-            <div className="h2 text-center">About Me</div>
+            <div className={"h2 text-center" + (darkMode? " color-primary": "") }>About Me</div>
             <div className="">
               Hi,
               <br></br>I am Mahbubul Haque, an undergraduate Computer Science

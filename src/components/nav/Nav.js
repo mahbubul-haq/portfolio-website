@@ -53,14 +53,15 @@ const MyNav = () => {
               }}
             />
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body className="offcanvas-body">
             <Nav className="text-start m-md-auto custom-nav ">
               <Stack>
                 <Nav.Link
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 0 ? " current-page" : "")
+                    (page === 0 ? " current-page" : "") +
+                    (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
                   onClick={() => {
@@ -76,7 +77,8 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 1 ? " current-page" : "")
+                    (page === 1 ? " current-page" : "") +
+                    (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
                   onClick={() => {
@@ -92,7 +94,8 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 2 ? " current-page" : "")
+                    (page === 2 ? " current-page" : "") +
+                    (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
                   onClick={() => {
@@ -108,7 +111,8 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 3 ? " current-page" : "")
+                    (page === 3 ? " current-page" : "") +
+                    (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
                   onClick={() => {
@@ -124,7 +128,8 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 4 ? " current-page" : "")
+                    (page === 4 ? " current-page" : "") +
+                    (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
                   onClick={() => {
@@ -140,7 +145,8 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 5 ? " current-page" : "")
+                    (page === 5 ? " current-page" : "") +
+                    (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
                   onClick={() => {
@@ -156,7 +162,8 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 6 ? " current-page" : "")
+                    (page === 6 ? " current-page" : "") +
+                    (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
                   onClick={() => {

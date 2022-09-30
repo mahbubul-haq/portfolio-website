@@ -138,6 +138,11 @@
   color: blue;
 }
 
+.current-page1 {
+  /* standard color for anchor tag */
+  color: rgb(62, 71, 237);
+}
+
 .nav-offcanvas {
   padding: 0;
   margin: 0px 0px 0px 0px;
@@ -159,6 +164,10 @@
 .nav-offcanvas-header {
   color: black;
   border-bottom: 1px solid rgba(210, 210, 210, 0.705);
+}
+
+.dark-offcanvas-header {
+  border-bottom: 1px solid rgba(210, 210, 210, 0.25);
 }
 
 .nav-offcanvas-dark {

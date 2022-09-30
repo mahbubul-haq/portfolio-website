@@ -43,7 +43,7 @@ const MyNav = () => {
           style={{ color: color, backgroundColor: backgroundColor }}
         >
           <Offcanvas.Header
-            className="nav-offcanvas-header"
+            className={"nav-offcanvas-header" + (darkMode ? " dark-offcanvas-header" : "")}
             style={{ color: color }}
           >
             <Offcanvas.Title>Mahbubul Haque</Offcanvas.Title>
@@ -60,7 +60,7 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 0 ? " current-page" : "") +
+                    (page === 0 ? " current-page1" : "") +
                     (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
@@ -77,7 +77,7 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 1 ? " current-page" : "") +
+                    (page === 1 ? " current-page1" : "") +
                     (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
@@ -94,7 +94,7 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 2 ? " current-page" : "") +
+                    (page === 2 ? " current-page1" : "") +
                     (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
@@ -111,7 +111,7 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 3 ? " current-page" : "") +
+                    (page === 3 ? " current-page1" : "") +
                     (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
@@ -128,7 +128,7 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 4 ? " current-page" : "") +
+                    (page === 4 ? " current-page1" : "") +
                     (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
@@ -145,7 +145,7 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 5 ? " current-page" : "") +
+                    (page === 5 ? " current-page1" : "") +
                     (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"
@@ -162,7 +162,7 @@ const MyNav = () => {
                   className={
                     "custom-nav-link1 " +
                     class_name +
-                    (page === 6 ? " current-page" : "") +
+                    (page === 6 ? " current-page1" : "") +
                     (darkMode ? " dark-offcanvas-link1" : "")
                   }
                   role="button"

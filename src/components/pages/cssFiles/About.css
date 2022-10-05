@@ -126,6 +126,10 @@
   color: white;
 }
 
+.custom-embed {
+  background-color: black;
+}
+
 @media screen and (max-width: 768px) {
   .profile-picture {
     width: 100px;

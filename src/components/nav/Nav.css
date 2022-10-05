@@ -34,12 +34,14 @@
 .custom-nav-link1 {
   margin: 0px 10px 0px 10px;
   font-weight: 500;
+  font-family: cursive, sans-serif;
 }
 
 .custom-navbar-brand {
   font-weight: 500;
   margin-left: 10px;
   min-height: 40px;
+  font-family: cursive, sans-serif;
 }
 
 .nav-offcanvas-dark-header {
@@ -47,7 +49,7 @@
 }
 
 .custom-nav-link:hover {
-  color: blue;
+  color: var(--navbar-active-hover);
 }
 
 .custom-nav-link:active,
@@ -55,16 +57,16 @@
 .custom-nav-link1:active,
 .custom-nav-link1:focus,
 .custom-nav-link1:hover {
-  color: blue;
+  color: var(--navbar-active-hover);
 }
 
 .custom-navbar-brand:hover {
-  color: blue;
+  color: var(--navbar-active-hover);
 }
 
 .custom-navbar-brand:active,
 .custom-navbar-brand:focus {
-  color: blue;
+  color: var(--navbar-active-hover);
 }
 
 .custom-navbar-toggle {
@@ -92,7 +94,7 @@
   color: black;
 }
 .custom-navbar-toggle-icon:hover {
-  color: rgb(27, 4, 203);
+  color: var(--navbar-active-hover);
 }
 
 .custom-nav-link-icon {
@@ -106,7 +108,7 @@
 }
 .custom-dark-mode:hover {
   cursor: pointer;
-  color: blue;
+  color: var(--navbar-active-hover);
 }
 
 .dark-mode-container {
@@ -135,12 +137,12 @@
 }
 
 .current-page {
-  color: blue;
+  color: var(--navbar-active-hover);
 }
 
 .current-page1 {
   /* standard color for anchor tag */
-  color: rgb(62, 71, 237);
+  color: var(--navbar-active-hover);
 }
 
 .nav-offcanvas {
@@ -164,6 +166,7 @@
 .nav-offcanvas-header {
   color: black;
   border-bottom: 1px solid rgba(210, 210, 210, 0.705);
+  font-family: cursive, sans-serif;
 }
 
 .dark-offcanvas-header {

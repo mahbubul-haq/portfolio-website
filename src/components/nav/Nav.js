@@ -266,7 +266,7 @@ const MyNav = () => {
             }}
           >
             {/* <img src="images/logo_transparent.png" className="img-fluid" style={{width:"45px", height:"45px", margin:"-4px 0px -4px 0", padding: "0"}} alt="logo" /> */}
-            <span className="navbar-brand-name d-none d-sm-block d-md-none d-lg-block">
+            <span className="navbar-brand-name d-none d-sm-block d-md-none d-lg-block ms-2">
               Mahbubul Haque
             </span>
             {/* <span className="nav-logo badge pill">M</span>
@@ -403,9 +403,9 @@ const MyNav = () => {
             }}
           >
             {darkMode ? (
-              <FaSun className="custom-nav-link-icon" size={20} />
+              <FaSun className="custom-nav-link-icon me-md-2" size={20} />
             ) : (
-              <FaMoon className="custom-nav-link-icon p-0 m-0" size={20} />
+              <FaMoon className="custom-nav-link-icon me-md-2 p-0 m-0" size={20} />
             )}
           </Nav.Link>
         </Container>

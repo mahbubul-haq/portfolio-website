@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import MyNav from "./components/nav/Nav";
 
-import { BiChevronUp } from "react-icons/bi";
+import { BsArrowUpSquare } from "react-icons/bs";
 import DarkModeState from "./components/context/DarkModeState";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
@@ -23,8 +23,8 @@ function App() {
       let element1 = document.getElementById("outer-container-scroll");
       
       if (
-        document.body.scrollTop > 20 ||
-        element1.scrollTop > 20
+        document.body.scrollTop > 200 ||
+        element1.scrollTop > 200
       ) {
         
         element.style.opacity = "1";
@@ -78,7 +78,7 @@ function App() {
               <Route exact path="/contact" element={<Contact />} />
             </Routes>
             <div className="scroll-top" onClick={() => scrollTop()}>
-              <BiChevronUp className="fw-4" size={30} />
+              <BsArrowUpSquare className="fw-4 to-top" size={40} />
             </div>
           </div>
         </Router>

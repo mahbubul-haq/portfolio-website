@@ -27,19 +27,26 @@
   font-size: 15px;
   border: none;
   outline: none;
-  background-color: #0d6efd;
-  color: white;
+  background-color: transparent;
+  color: black;
   cursor: default;
-  padding: 5px;
+  padding: 0px;
   border-radius: 4px;
   font-weight: 400;
-  transition: background-color 0.5s ease-in-out, opacity 0.5s linear;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s linear,
+    color 0.3s ease-in-out;
   opacity: 0;
   z-index: 0;
 }
 
 .scroll-top:hover {
-  background-color: rgb(52, 52, 181);
+}
+
+.to-top {
+  color: var(--navbar-active-hover);
+}
+.to-top:hover {
+  color: var(--navbar-active-hover1);
 }
 
 @media screen and (max-width: 576px) {
@@ -47,6 +54,5 @@
     font-size: 10px;
     bottom: 20px;
     right: 20px;
-    padding: 0px;
   }
 }

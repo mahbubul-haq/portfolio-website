@@ -10,6 +10,9 @@
   --dark-mode-background: #18191a;
   --dark-mode-menu: #242526;
   --dark-mode-hover: #3a3b3c;
+
+  --navbar-active-hover1: rgb(232, 29, 178);
+  --navbar-active-hover: rgb(232, 29, 90);
 }
 
 * {

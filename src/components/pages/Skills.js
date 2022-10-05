@@ -9,7 +9,7 @@ import { DarkModeContext } from "../context/DarkModeContext";
 import "./cssFiles/About.css";
 
 const Skills = () => {
-  const [progress, setProgress] = React.useState(true);
+  const [progress, setProgress] = React.useState(false);
 
   const { setPage, darkMode } = React.useContext(DarkModeContext);
 

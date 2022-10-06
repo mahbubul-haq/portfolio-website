@@ -27,7 +27,7 @@
   font-size: 15px;
   border: none;
   outline: none;
-  background-color: var(--navbar-active-hover);
+  background-color: black;
   color: black;
   cursor: default;
   padding: 0px;
@@ -41,11 +41,11 @@
 }
 
 .scroll-top:hover {
-  background-color: rgb(241, 91, 156);
+  background-color: rgb(255, 255, 255);
 }
 
 .to-top {
-  color: black;
+  color: var(--navbar-active-hover);
 }
 .to-top:hover {
   /* color: var(--navbar-active-hover1); */

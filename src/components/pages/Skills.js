@@ -73,13 +73,13 @@ const Skills = () => {
                                   {current.name}
                                 </div>
                               </div>
-                              <div className="col-12 col-sm-6 d-flex align-items-center m-0">
+                              <div className="col-12 col-sm-6 d-flex align-items-center">
                                 <div
                                   className="progress m-0 p-0 w-100"
-                                  style={{ height: "10px" }}
+                                  style={{ height: "10px"}}
                                 >
                                   <div
-                                    className="progress-bar bg-info "
+                                    className="progress-bar bg-info m-0 p-0"
                                     role="progressbar"
                                     aria-valuemin={0}
                                     aria-valuenow={current.progress}
@@ -88,7 +88,6 @@ const Skills = () => {
                                       width: `${current.progress}%`,
                                       color: "black",
                                       textAlign: "right",
-                                      paddingLeft: "5px",
                                     }}
                                   >
                                     {current.progress}%

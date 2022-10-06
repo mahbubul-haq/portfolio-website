@@ -28,7 +28,7 @@ const MyNav = () => {
       backgroundColor = "white",
       class_name = "";
     if (darkMode) {
-      color = "#e4e6eb";
+      color = "#b0b3b8";
       backgroundColor = "#242526";
       class_name = "nav-offcanvas-dark-header";
     }

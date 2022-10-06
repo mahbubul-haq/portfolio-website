@@ -147,19 +147,20 @@
 .nav-offcanvas {
   padding: 0;
   margin: 0px 0px 0px 0px;
-  background-color: white;
+  background-color: rgb(246, 239, 239);
   color: rgb(0, 0, 0);
 }
 
 .custom-nav-link1 {
   margin: 0px 0px 0px 0px;
-  font-weight: 500;
-  border-top: 1.5px solid rgba(210, 210, 210, 0.705);
+  padding: 10px;
+  font-weight: normal;
+  border-top: 1px solid rgba(210, 210, 210, 0.705);
 }
 
 /* border-bottom for last child */
 .custom-nav-link1:last-child {
-  border-bottom: 1.5px solid rgba(210, 210, 210, 0.705);
+  border-bottom: 1px solid rgba(210, 210, 210, 0.705);
 }
 
 .nav-offcanvas-header {
@@ -178,11 +179,11 @@
 }
 
 .dark-offcanvas-link1 {
-  border-top: 1.5px solid rgba(210, 210, 210, 0.25);
+  border-top: 1px solid rgba(210, 210, 210, 0.25);
 }
 
 .dark-offcanvas-link1:last-child {
-  border-bottom: 1.5px solid rgba(210, 210, 210, 0.25);
+  border-bottom: 1px solid rgba(210, 210, 210, 0.25);
 }
 
 @media screen and (max-width: 768px) {

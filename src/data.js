@@ -5,32 +5,31 @@ export const skillsData = [
         {
             name: "JavaScript",
             progress: 90,
-            experience: "3 years",
         },
         {
             name: "Python",
             progress: 90,
-            experience: "3 years",
+           
         },
         {
             name: "C++",
             progress: 90,
-            experience: "5 years",
+            
         },
         {
             name: "Java",
             progress: 80,
-            experience: "2 years",
+            
         },
         {
             name: "HTML",
             progress: 90,
-            experience: "3 years",
+            
         },
         {
             name: "CSS",
             progress: 90,
-            experience: "3 years",
+            
         },
     ]
     },
@@ -39,39 +38,39 @@ export const skillsData = [
         list: [
         {
             name: "React.js",
-            progress: 90,
-            experience: "1 year",
+            progress: 85,
+           
         },
         {
             name: "Bootstrap",
-            progress: 80,
-            experience: "1 year",
+            progress: 90,
+            
         },
         {
             name: "Express.js",
-            progress: 80,
-            experience: "6 months",
+            progress: 85,
+           
         }
         ,
         {
             name: "Node.js",
             progress: 60,
-            experience: "6 months",
+           
         },
         {
             name: "Django",
             progress: 70,
-            experience: "2 years",
+            
         },
         {
             name: "Django Rest Framework",
             progress: 80,
-            experience: "6 months",
+            
         },
         {
             name: "JavaFX",
             progress: 80,
-            experience: "6 months",
+            
         },
     ]
     },
@@ -81,18 +80,18 @@ export const skillsData = [
         {
             name: "MongoDB",
             progress: 90,
-            experience: "6 months",
+           
         },
         {
             name: "PostgreSQL",
             progress: 90,
-            experience: "6 months",
+          
         },
         {
             // PL/SQL
             name: "Oracle",
             progress: 85,
-            experience: "6 months",
+            
         },
     ]},
     {
@@ -101,17 +100,17 @@ export const skillsData = [
         {
             name: "Git",
             progress: 90,
-            experience: "1 year",
+            
         },
         {
             name: "GitHub",
             progress: 90,
-            experience: "4 years",
+            
         },
         {
             name: "Bash",
-            progress: 70,
-            experience: "2 years",
+            progress: 60,
+            
         },
     ]},
     {
@@ -120,28 +119,28 @@ export const skillsData = [
         {
             name: "Data Structures and Algorithms",
             progress: 90,
-            experience: "4 years",
+           
         },
         {
             name: "Problem Solving",
             progress: 90,
-            experience: "5 years",
+            
         },
         {
             name: "Object Oriented Programming",
-            progress: 95,
-            experience: "5 years",
+            progress: 90,
+           
         },
         {
             name: "Competitive Programming",
             progress: 90,
-            experience: "4 years",
+           
         },
     ]},
         
 ];
 
-export const lastUpdated = "September 20, 2021";
+export const lastUpdated = "October 6, 2022";
 
 export const problemSolvingData = [
     {
@@ -238,4 +237,31 @@ export const problemSolvingData = [
     },
 
 
+];
+
+export const projectsInfo = [
+    {
+        project_type: "Web Projects",
+        id: "web",
+        projects: [
+            {
+                title: "Personal Portfolio Website",
+                titleLink: {
+                    link: "https://mahbubul-haq.github.io/",
+                    text: "Mahbubul Haque"
+                },
+                role: "Everything",
+                technology: "React.js, Bootstrap, CSS, HTML",
+                description: `This is my personal portfolio website. This website contain my professional as well as academic
+                experience.
+                `,
+                features: [
+                    "Responsive Design",
+                    "Dark Mode",
+                    "Resume, Projects, Experience, Skills",
+                    "CI/CD with git & GitHub pages",
+                ],
+            }
+        ]
+    },
 ];

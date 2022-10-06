@@ -240,28 +240,135 @@ export const problemSolvingData = [
 ];
 
 export const projectsInfo = [
-    {
-        project_type: "Web Projects",
-        id: "web",
-        projects: [
-            {
-                title: "Personal Portfolio Website",
-                titleLink: {
-                    link: "https://mahbubul-haq.github.io/",
-                    text: "Mahbubul Haque"
-                },
-                role: "Everything",
-                technology: "React.js, Bootstrap, CSS, HTML",
-                description: `This is my personal portfolio website. This website contain my professional as well as academic
-                experience.
+  {
+    projectType: "Web Projects",
+    id: "web",
+    projects: [
+      {
+        title: "Personal Portfolio Website",
+        titleLink: {
+          link: "https://mahbubul-haq.github.io/",
+          text: "Mahbubul Haque",
+        },
+        role: "Everything",
+        technology: "React, Bootstrap, CSS",
+        description: `This is my personal portfolio website. This website contains my professional as well as academic
+                experience. 
                 `,
-                features: [
-                    "Responsive Design",
-                    "Dark Mode",
-                    "Resume, Projects, Experience, Skills",
-                    "CI/CD with git & GitHub pages",
-                ],
-            }
-        ]
-    },
+        features: [
+          "Responsive Design, Dark Mode",
+          "Resume, Projects, Experience, Skills",
+          "CI/CD using git & GitHub pages",
+        ],
+        demonstration: {
+          showVideo: false,
+          embedLink: "",
+          imgLink: "",
+        },
+      },
+    ],
+  },
+  {
+    projectType: "Academic Projects",
+    id: "academic",
+    projects: [
+      {
+        title: "Travel Bug - Travel & Tourism Website",
+        role: "Frontend, Backend, Host(everything), Messaging, Schema, ERD, Class Diagram",
+        technology:
+          " Nodejs, Express, React, MongoDB, Bootstrap, CSS, JWT, Stripe",
+        description: `Travel Bug is a travel and tourism website. It is a platform for hosting
+                experiences, booking experiences, and providing transport guidelines. This project was 
+                made for Software Developmment Sessional course along with two other team members.
+                `,
+        features: [
+          "Hosting Experiences, booking experiences",
+          "Providing Transport Guidelines",
+          "Payment Gateway through Stripe",
+          "Messaging System, Authentication",
+        ],
+        githubLink: "https://github.com/mahbubul-haq/Travel-Bug-Airbnb",
+        demonstration: {
+          showVideo: true,
+          embedLink: "https://www.youtube.com/embed/g-shwX9y4aI",
+          imgLink: "",
+        },
+      },
+      {
+        title: "UBER - Ride Sharing & Car Rental Website",
+        role: "Everything",
+        technology:
+          "Django, Oracle PL/SQL, Bootstrap, Python, JavaScript, CSS, Leaflet",
+        description: `UBER is a ride sharing and car rental website. This website provides amazing
+                ride sharing experience and car rental service. This project was made for Database Sessional
+                course.
+                `,
+        features: [
+          "Ride Sharing, Car Rental",
+          "Map Integration using Leaflet and GeoLocation",
+        ],
+        githubLink: "https://github.com/mahbubul-haq/UBER-Ride-Sharing-Service",
+        demonstration: {
+          showVideo: false,
+          embedLink: "",
+          imgLink: "",
+        },
+      },
+      {
+        title: "Smart Room Simulation",
+        role: "Everything",
+        technology: `C, Atmega32, LCD, Keypad, Buzzer, Motor, PIR Sensor, Gas Sensor,
+                Flame Sensor, Temperature Sensor, GSM Module, LDR Sensor`,
+        description: `Smart Room Simulation is a simulation of a smart room in Proteus Software.
+                This simulation provides a smart room experience. This project was
+                made for Microcontroller Sessional course.
+                `,
+        features: [
+          "Manual, Automatic, Remote Control",
+          "Detects Fire, Gas Leak, Temperature, Light, Human Entrance",
+          "Sends SMS through GSM Module",
+        ],
+        githubLink: "https://github.com/mahbubul-haq/Smart-Room-Simulation",
+        demonstration: {
+          showVideo: true,
+          embedLink: "https://www.youtube.com/embed/iGjB0XKjxSU",
+          imgLink: "",
+        },
+      },
+      {
+        title: "Network Car Racing Game",
+        role: "Everything",
+        technology: `Java, JavaFX, Socket Programming, Multithreading, OOP`,
+        description: `Network Car Racing Game is a multiplayer car racing game. This game is
+                played between two players on the same network. This project was made for
+                Object Oriented Programming Language Sessional course.
+                `,
+        features: [
+          "Registration and login",
+          "Multiplayer connection through Socket Programming",
+        ],
+        githubLink: "https://github.com/mahbubul-haq/Network-Car-Racing-Game",
+        demonstration: {
+          showVideo: true,
+          embedLink: "https://www.youtube.com/embed/8uobXJ6C7NY",
+          imgLink: "",
+        },
+      },
+      {
+        title: "DX BALL Game",
+        role: "Creating different levels, Game logic, Design, Implementation",
+        technology: `C, iGraphics.h`,
+        description: `DX BALL Game is a single player multi level game. It has different levels and different types of
+                bricks. This project was made for Structured Programming Language Sessional course.
+                `,
+        features: ["Different Levels, different types of bricks", "Smooth gameplay"],
+        githubLink: "https://github.com/mahbubul-haq/DX-BALL-Game",
+        demonstration: {
+          showVideo: true,
+          embedLink: "https://www.youtube.com/embed/MobiPt_rQKo",
+          imgLink: "",
+        },
+      },
+    ],
+  },
 ];

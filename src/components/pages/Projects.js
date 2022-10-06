@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
+import { projectsInfo } from "../../data";
 import { DarkModeContext } from "../context/DarkModeContext";
 
 import "./cssFiles/About.css";
@@ -34,119 +35,142 @@ const Projects = () => {
             </li>
           </ul>
         </Col>
-
-        <Col xs={12} id="web" className="mb-4">
-          <div
-            className={
-              "h4 fw-semibold text-center mb-5" +
-              (darkMode ? " color-primary" : "")
-            }
-          >
-            Web Projects
-          </div>
-          <Stack gap={2}>
-            <Row className="border border-info border-0 p-0 ms-2 me-2 hstack g-0 g-md-5">
-              <Col
-                md={6}
-                className="d-flex align-items-center custom-embed p-0"
+        {projectsInfo.map((project, index) => {
+          return (
+            <Col xs={12} id={project.id} className="mb-4" key={index}>
+              <div
+                className={
+                  "h4 fw-semibold text-center mb-5" +
+                  (darkMode ? " color-primary" : "")
+                }
               >
-                <iframe
-                  className="p-0 m-0"
-                  style={{ width: "100%", height: "250px" }}
-                  src="https://www.youtube.com/embed/MobiPt_rQKo"
-                  title="DX BALL Game using C programming and iGraphics.h Library"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;fullscreen;"
-                ></iframe>
-              </Col>
+                {project.projectType}
+              </div>
+              <Stack gap={2}>
+                {project.projects.map((curProject, index1) => {
+                  return (
+                    <Row
+                      key={index1}
+                      className="border border-info border-0 p-0 ms-2 mb-4 me-2 hstack g-0 g-md-5"
+                    >
+                      <Col
+                        md={6}
+                        className="d-flex align-items-center custom-embed p-0"
+                      >
+                        {curProject.demonstration.showVideo ? (
+                          <iframe
+                            className="p-0 m-0"
+                            style={{
+                              width: "100%",
+                              height: "auto",
+                              minHeight: "250px",
+                            }}
+                            src={curProject.demonstration.embedLink}
+                            title="DX BALL Game using C programming and iGraphics.h Library"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;fullscreen;"
+                          ></iframe>
+                        ) : (
+                          <img
+                            src={curProject.demonstration.imgLink}
+                            alt=""
+                            style={{
+                              width: "100%",
+                              height: "auto",
+                              minHeight: "250px",
+                            }}
+                            className="img-fluid"
+                          />
+                        )}
+                      </Col>
 
-              <Col md={6} className="paragraph-decoration">
-                <div
-                  className={
-                    "fw-semibold m-0 p-0 mb-4 mt-3" +
-                    (darkMode ? " color-primary" : "")
-                  }
-                >
-                  DX BALL - Single Player Game
-                </div>
-                <div>
-                  <span
-                    className={
-                      "fw-semibold" + (darkMode ? " color-primary" : "")
-                    }
-                  >
-                    Role:{" "}
-                  </span>
-                  Everything
-                </div>
-                <div>
-                  <span
-                    className={
-                      "fw-semibold" + (darkMode ? " color-primary" : "")
-                    }
-                  >
-                    Technology:{" "}
-                  </span>
-                  C, iGraphics.h
-                </div>
-                <div>
-                  <span
-                    className={
-                      "fw-semibold" + (darkMode ? " color-primary" : "")
-                    }
-                  >
-                    Description:{" "}
-                  </span>
-                  DX Ball is a single player game. The player has to break all
-                  the bricks to win the game. The player has to control the
-                  paddle to bounce the ball and break the bricks. The player has
-                  to collect the power-ups to increase the score. The player has
-                </div>
-                <div>
-                  <span
-                    className={
-                      "fw-semibold" + (darkMode ? " color-primary" : "")
-                    }
-                  >
-                    Features{" "}
-                  </span>
-                  <ul>
-                    <li>Single player game</li>
-                    <li>Power-ups</li>
-                    <li>High score</li>
-                  </ul>
-                </div>
-                <div>
-                  <span className="fw-bold"> </span>
-                  <a
-                    className="custom-a"
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Github Link:
-                  </a>
-                </div>
-              </Col>
-            </Row>
-          </Stack>
-        </Col>
+                      <Col md={6} className="paragraph-decoration">
+                        <div
+                          className={
+                            "fw-semibold m-0 p-0 mb-4 mt-3" +
+                            (darkMode ? " color-primary" : "")
+                          }
+                        >
+                          {curProject.title}{" "}
+                          {curProject.titleLink ? (
+                            <>
+                              {"- "}
+                              <a
+                                className="custom-a"
+                                href={curProject.titleLink.link}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                {curProject.titleLink.text}
+                              </a>
+                            </>
+                          ) : null}
+                        </div>
+                        <div>
+                          <span
+                            className={
+                              "fw-semibold" + (darkMode ? " color-primary" : "")
+                            }
+                          >
+                            Role:{" "}
+                          </span>
+                          {curProject.role}
+                        </div>
+                        <div>
+                          <span
+                            className={
+                              "fw-semibold" + (darkMode ? " color-primary" : "")
+                            }
+                          >
+                            Technology:{" "}
+                          </span>
+                          {curProject.technology}
+                        </div>
+                        <div>
+                          <span
+                            className={
+                              "fw-semibold" + (darkMode ? " color-primary" : "")
+                            }
+                          >
+                            Description:{" "}
+                          </span>
+                          {curProject.description}
+                        </div>
+                        <div>
+                          <span
+                            className={
+                              "fw-semibold" + (darkMode ? " color-primary" : "")
+                            }
+                          >
+                            Features{" "}
+                          </span>
+                          <ul>
+                            {curProject.features.map((feature, index2) => {
+                              return <li key={index2}>{feature}</li>;
+                            })}
+                          </ul>
+                        </div>
+                        <div>
+                          <span className="fw-bold"> </span>
+                          <a
+                            className="custom-a"
+                            href="#"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Github Link:
+                          </a>
+                        </div>
+                      </Col>
+                    </Row>
+                  );
+                })}
+              </Stack>
+            </Col>
+          );
+        })}
 
-        <Col xs={12} id="academic">
-          <div className="h4 fw-semibold mb-4 text-center">Web Projects</div>
-          <Stack gap={2}>
-            <Row className="border border-info border-2 pt-2 pb-2 ms-2 me-2">
-              <iframe
-                width="100%"
-                height="250px"
-                src="https://www.youtube.com/embed/MobiPt_rQKo"
-                title="DX BALL Game using C programming and iGraphics.h Library"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;fullscreen"
-              ></iframe>
-            </Row>
-          </Stack>
-        </Col>
+        
       </Row>
     </Container>
   );

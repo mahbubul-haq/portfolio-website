@@ -36,9 +36,16 @@ const Projects = () => {
         </Col>
 
         <Col xs={12} id="web" className="mb-4">
-          <div className="h4 fw-semibold mb-4 text-center">Web Projects</div>
+          <div
+            className={
+              "h4 fw-semibold mb-4 text-center" +
+              (darkMode ? " color-primary" : "")
+            }
+          >
+            Web Projects
+          </div>
           <Stack gap={2}>
-            <Row className="border border-info border-0 p-2 ms-2 me-2 g-2 hstack">
+            <Row className="border border-info border-0 p-0 mt-3 ms-2 me-2 hstack">
               <Col
                 md={5}
                 className="d-flex align-items-center p-0 mb-2 mb-md-0 mt-0 custom-embed"
@@ -51,33 +58,34 @@ const Projects = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;fullscreen;"
                 ></iframe>
-                
-              </Col>
-              <Col md={1} className="" style={{height: "100%"}}>
-                <div className="vr" style={{height: "100%"}}></div>
               </Col>
 
-              <Col md={6} className="paragraph-decoration p-0 ps-md-2">
-                <div className="fs-5 text-center fw-bold mb-2">
-                  DX BALL Game
+              <Col md={7} className="paragraph-decoration p-0 ps-md-4 m-0">
+                <div
+                  className={
+                    "fw-semibold m-0 p-0 mb-4 " +
+                    (darkMode ? " color-primary" : "")
+                  }
+                >
+                  DX BALL - Single Player Game
                 </div>
                 <div>
-                  <span className="fw-bold">Role: </span>
+                  <span className="fw-semibold">Role: </span>
                   Everything
                 </div>
                 <div>
-                  <span className="fw-bold">Technology: </span>
+                  <span className="fw-semibold">Technology: </span>
                   C, iGraphics.h
                 </div>
                 <div>
-                  <span className="fw-bold">Description: </span>
+                  <span className="fw-semibold">Description: </span>
                   DX Ball is a single player game. The player has to break all
                   the bricks to win the game. The player has to control the
                   paddle to bounce the ball and break the bricks. The player has
                   to collect the power-ups to increase the score. The player has
                 </div>
                 <div>
-                  <span className="fw-bold">Features: </span>
+                  <span className="fw-semibold">Features </span>
                   <ul>
                     <li>Single player game</li>
                     <li>Power-ups</li>

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import MyNav from "./components/nav/Nav";
 
-import { BsArrowUpSquare } from "react-icons/bs";
+import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import DarkModeState from "./components/context/DarkModeState";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
@@ -78,7 +78,7 @@ function App() {
               <Route exact path="/contact" element={<Contact />} />
             </Routes>
             <div className="scroll-top" onClick={() => scrollTop()}>
-              <BsArrowUpSquare className="fw-4 to-top" size={40} />
+              <BsFillArrowUpSquareFill className="fw-4 to-top" size={40} />
             </div>
           </div>
         </Router>

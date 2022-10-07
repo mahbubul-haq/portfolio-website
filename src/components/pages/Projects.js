@@ -102,7 +102,7 @@ const Projects = () => {
                             <>
                               {" - "}
                               <a
-                                className="custom-a"
+                                className="button-link"
                                 href={curProject.titleLink.link}
                                 target="_blank"
                                 rel="noreferrer"
@@ -118,7 +118,7 @@ const Projects = () => {
                             <>
                               {" - "}
                               <a
-                                className="custom-a"
+                                className="button-link"
                                 href={curProject.githubLink}
                                 target="_blank"
                                 rel="noreferrer"

@@ -183,7 +183,7 @@ const Home = () => {
               className={"card-footer" + (darkMode ? " home-card-footer" : "")}
             >
               <button
-                className="btn btn-primary btn-sm"
+                className="btn btn-primary btn-sm card-btn0"
                 onClick={() => {
                   navigate("/skills");
                 }}
@@ -211,7 +211,7 @@ const Home = () => {
             </div>
             <div className="card-body home-card-body">
               <h4 className="home-card-title mt-0">
-                Worked on some amzing projects
+                Worked on some amazing projects
               </h4>
               <p
                 className={

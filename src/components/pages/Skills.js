@@ -76,7 +76,7 @@ const Skills = () => {
                               <div className="col-12 col-sm-6 d-flex align-items-center">
                                 <div
                                   className="progress m-0 p-0 w-100"
-                                  style={{ height: "10px"}}
+                                  style={{ height: "10px" }}
                                 >
                                   <div
                                     className="progress-bar bg-info  m-0 p-0"
@@ -96,7 +96,11 @@ const Skills = () => {
                               </div>
                             </>
                           ) : (
-                            <div key={index1} className="col-auto me-1">
+                            <div
+                              key={index1}
+                              className="col-auto me-1"
+                              style={{ fontFamily: "Raleway, sans-serif" }}
+                            >
                               {current.name}
                               {index1 !== skill.list.length - 1 ? "," : ""}
                             </div>

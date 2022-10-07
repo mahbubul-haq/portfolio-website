@@ -44,7 +44,7 @@
 }
 
 .nav-offcanvas-dark-header {
-  color: var(--dark-mode-color-primary);
+  color: var(--dark-mode-color-secondary);
 }
 
 .custom-nav-link:hover {

@@ -376,3 +376,35 @@ export const projectsInfo = [
     ],
   },
 ];
+
+export const homeCards = [
+  {
+    title: "Full Stack Web Developer",
+    description: "More than 3 years of experience in this field",
+    cardClass: "home-card0",
+    cardTopClass: "full-stack-top0",
+    cardButtonClass: "card-btn0",
+    imgSrc: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190626123927/untitlsssssed.png",
+    buttonText: "See my skills"
+  },
+  {
+    title: "Worked on Some Amazing Projects",
+    description: "I have worked on both individual and team projects",
+    cardClass: "home-card1",
+    cardTopClass: "full-stack-top1",
+    cardButtonClass: "card-btn1",
+    imgSrc: "https://www.publichealthnotes.com/wp-content/uploads/2020/03/project-planning-header@2x.png",
+    buttonText: "See my projects"
+  },
+  {
+    title: "Expert in Data Structures and Algorithms",
+    description: "Experienced in implementation and analysis",
+    cardClass: "home-card2",
+    cardTopClass: "full-stack-top2",
+    cardButtonClass: "card-btn2",
+    imgSrc: "https://www.educative.io/api/page/5668639106519040/image/download/5668639106519040",
+    buttonText: "See in Github",
+  }
+];
+
+

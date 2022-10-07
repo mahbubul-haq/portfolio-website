@@ -51,6 +51,7 @@ const MyNav = () => {
               onClick={() => {
                 handleClose();
               }}
+              className="nav-offcanvas-close"
             />
           </Offcanvas.Header>
           <Offcanvas.Body className="offcanvas-body">

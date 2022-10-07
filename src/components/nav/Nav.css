@@ -153,7 +153,7 @@
 
 .custom-nav-link1 {
   margin: 0px 0px 0px 0px;
-  padding: 10px;
+  padding: 12px 20px 12px 20px;
   font-weight: normal;
   border-top: 1px solid rgba(210, 210, 210, 0.705);
 }
@@ -167,6 +167,8 @@
   color: black;
   border-bottom: 1px solid rgba(210, 210, 210, 0.705);
   font-family: cursive, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .dark-offcanvas-header {
@@ -184,6 +186,14 @@
 
 .dark-offcanvas-link1:last-child {
   border-bottom: 1px solid rgba(210, 210, 210, 0.25);
+}
+
+.nav-offcanvas-close {
+  cursor: pointer;
+}
+
+.nav-offcanvas-close:hover {
+  color: var(--navbar-active-hover);
 }
 
 @media screen and (max-width: 768px) {

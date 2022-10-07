@@ -161,13 +161,31 @@
     var(--navbar-active-hover1)
   );
 }
+.full-stack-top2 {
+  background-color: rgb(72, 230, 96);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(30, 144, 17),
+    rgb(31, 174, 26)
+  );
+}
+
+.full-stack-top3 {
+  background-color: rgb(202, 29, 29);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(196, 30, 18),
+    rgb(238, 56, 40)
+  );
+}
+
 .home-card-image {
   transform: translateY(-50%);
 }
 
 .home-card {
   border-radius: 8px;
-  box-shadow: 2px 4px 8px 0 rgba(70, 80, 158, 0.5);
+  box-shadow: 2px 4px 8px 0 rgba(16, 136, 187, 0.5);
   background-color: transparent;
   border: 0;
   outline: 0;
@@ -178,11 +196,27 @@
   box-shadow: 2px 4px 8px 0 rgba(152, 62, 110, 0.5);
 }
 
+.home-card2 {
+  box-shadow: 2px 4px 8px 0 rgba(77, 158, 70, 0.5);
+}
+
+.home-card3 {
+  box-shadow: 2px 4px 8px 0 rgba(164, 52, 52, 0.5);
+}
+
 .home-card:hover {
-  box-shadow: 4px 8px 10px 0 rgba(70, 80, 158, 0.5);
+  box-shadow: 4px 8px 10px 0 rgba(16, 136, 187, 0.5);
 }
 .home-card1:hover {
   box-shadow: 4px 8px 10px 0 rgba(152, 62, 110, 0.5);
+}
+
+.home-card2:hover {
+  box-shadow: 4px 8px 10px 0 rgba(77, 158, 70, 0.5);
+}
+
+.home-card3:hover {
+  box-shadow: 4px 8px 10px 0 rgba(164, 52, 52, 0.5);
 }
 
 .home-card-body {
@@ -204,6 +238,35 @@
   background-color: var(--navbar-active-hover);
   border-color: var(--navbar-active-hover);
   outline-color: var(--navbar-active-hover);
+}
+
+.card-btn2 {
+  background-color: rgb(31, 174, 26);
+  border-color: rgb(31, 174, 26);
+  outline-color: rgb(31, 174, 26);
+}
+.card-btn2:hover {
+  background-color: rgb(30, 144, 17);
+  border-color: rgb(30, 144, 17);
+  outline-color: rgb(30, 144, 17);
+}
+
+.card-btn3 {
+  background-color: rgb(238, 56, 40);
+  border-color: rgb(238, 56, 40);
+  outline-color: rgb(238, 56, 40);
+}
+
+.card-btn3:hover {
+  background-color: rgb(196, 30, 18);
+  border-color: rgb(196, 30, 18);
+  outline-color: rgb(196, 30, 18);
+}
+
+.home-card-footer {
+  background-color: rgb(29, 28, 28);
+  outline-color: white;
+  border-color: rgb(66, 62, 62);
 }
 
 @media screen and (max-width: 768px) {

@@ -63,7 +63,7 @@ export const skillsData = [
             
         },
         {
-            name: "Django Rest Framework",
+            name: 'Django Rest Framework',
             progress: 80,
             
         },

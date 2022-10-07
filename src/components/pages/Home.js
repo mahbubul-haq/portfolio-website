@@ -169,11 +169,19 @@ const Home = () => {
                 alt="Full Stack Developer"
               />
             </div>
-            <div className="home-card-body">
-              <h5 className="home-card-title mt-0">Full Stack Web Developer</h5>
-              <p className="home-card-text mb-4">
-                More than 3 years of experience{" "}
+            <div className="card-body home-card-body">
+              <h4 className="home-card-title mt-0">Full Stack Web Developer</h4>
+              <p
+                className={
+                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
+                }
+              >
+                More than 3 years of experience in this field{" "}
               </p>
+            </div>
+            <div
+              className={"card-footer" + (darkMode ? " home-card-footer" : "")}
+            >
               <button
                 className="btn btn-primary btn-sm"
                 onClick={() => {
@@ -201,21 +209,114 @@ const Home = () => {
                 alt="Full Stack Developer"
               />
             </div>
-            <div className="home-card-body">
-              <h5 className="home-card-title mt-0">
+            <div className="card-body home-card-body">
+              <h4 className="home-card-title mt-0">
                 Worked on some amzing projects
-              </h5>
-              <p className="home-card-text mb-4">
+              </h4>
+              <p
+                className={
+                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
+                }
+              >
                 I have worked on both individual and team projects{" "}
               </p>
+            </div>
+            <div
+              className={"card-footer " + (darkMode ? "home-card-footer" : "")}
+            >
               <button
                 className="btn btn-primary btn-sm card-btn1"
-          
                 onClick={() => {
                   navigate("/projects");
                 }}
               >
                 See my projects
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="col">
+          <div
+            className={
+              "card h-100 home-card home-card2" +
+              (darkMode ? " color-primary" : "")
+            }
+          >
+            <div className="full-stack-top full-stack-top2"></div>
+            <div className="home-card-image mb-0">
+              <img
+                src="https://www.educative.io/v2api/editorpage/5323562194829312/image/4539157721382912"
+                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
+                className="img-thumbnail img-fluid m-0"
+                alt="Full Stack Developer"
+              />
+            </div>
+            <div className="card-body home-card-body">
+              <h4 className="home-card-title mt-0">
+                Expert in Data Structures and Algorithms
+              </h4>
+              <p
+                className={
+                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
+                }
+              >
+                Experienced in implementation and analysis
+              </p>
+            </div>
+            <div
+              className={"card-footer " + (darkMode ? "home-card-footer" : "")}
+            >
+              <a
+                role="button"
+                className="btn btn-primary btn-sm card-btn2"
+                href="https://github.com/mahbubul-haq/ImplementedAlgorithms"
+              >
+                See in Github
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="col">
+          <div
+            className={
+              "card h-100 home-card home-card3" +
+              (darkMode ? " color-primary" : "")
+            }
+          >
+            <div className="full-stack-top full-stack-top3"></div>
+            <div className="home-card-image mb-0">
+              <img
+                src="https://transportfutures.institute/wp-content/uploads/2019/07/ideal_image.png"
+                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
+                className="img-thumbnail img-fluid m-0"
+                alt="Full Stack Developer"
+              />
+            </div>
+            <div className="card-body home-card-body">
+              <h4 className="home-card-title mt-0">
+                Expert in Problem Solving
+              </h4>
+              <p
+                className={
+                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
+                }
+              >
+                Solved 1500+ problems in different OJs
+              </p>
+            </div>
+            <div
+              className={"card-footer " + (darkMode ? "home-card-footer" : "")}
+            >
+              <button
+                className="btn btn-primary btn-sm card-btn3"
+                onClick={() => {
+                  //send state with navigate
+                  navigate("/experience", { state: { solve: true } });
+                }}
+              >
+                See solved list
               </button>
             </div>
           </div>

@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Table from "react-bootstrap/Table";
 import { BiTime } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { lastUpdated, problemSolvingData } from "../../data";
 import { DarkModeContext } from "../context/DarkModeContext";
 import "./cssFiles/About.css";
@@ -14,6 +14,15 @@ const Experience = () => {
   const [isSolve, setIsSolve] = React.useState(false);
   const {setPage} = React.useContext(DarkModeContext);
   const {darkMode} = React.useContext(DarkModeContext);
+
+  const value = useLocation().state;
+  useEffect(() => {
+    console.log(value);
+    if (value !== null) {
+        const {solve} = value;
+        setIsSolve(solve);
+    }
+  }, [value]);
 
   const navigate = useNavigate();
   

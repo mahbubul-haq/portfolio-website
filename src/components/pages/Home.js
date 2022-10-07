@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { SiCodeforces, SiGithub } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 import { DarkModeContext } from "../context/DarkModeContext";
 import "../nav/Nav.css";
 import "./cssFiles/About.css";
@@ -13,15 +14,46 @@ import "./cssFiles/About.css";
 const Home = () => {
   const { setPage } = React.useContext(DarkModeContext);
   const [isEnglish, setIsEnglish] = React.useState(true);
-  const {darkMode} = React.useContext(DarkModeContext);
+  const { darkMode } = React.useContext(DarkModeContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setPage(0);
   }, []);
 
   return (
-    <Container fluid className="common-container vertically-centered">
-      <Row className="m-auto">
+    <Container fluid className="common-container">
+      {/* <svg width="100%" height="100%" style={{position: "absolute", zIndex: "1", left: "0", top: "0"}}>
+        <g id="R1" transform="translate(250 250)">
+          <ellipse rx="100" ry="0" opacity="0.5">
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              dur="7s"
+              from="0"
+              to="360"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="cx"
+              dur="8s"
+              values="-20; 220; -20"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="ry"
+              dur="3s"
+              values="10; 60; 10"
+              repeatCount="indefinite"
+            />
+          </ellipse>
+        </g>
+        <use href="#R1" transform="rotate(72 390 150)" />
+        <use href="#R1" transform="rotate(144 390 150)" />
+        <use href="#R1" transform="rotate(216 390 150)" />
+        <use href="#R1" transform="rotate(288 390 150)" />
+      </svg> */}
+      <Row className="mt-2 mt-md-3 mt-lg-4">
         <Col className="">
           <Stack className="text-center" gap={1}>
             <div className="mb-4">
@@ -38,7 +70,13 @@ const Home = () => {
 
             {isEnglish ? (
               <>
-                <div className={"h3 about-name mb-2" + (darkMode? " color-primary": "")}>Mahbubul Haque</div>
+                <div
+                  className={
+                    "h3 about-name mb-2" + (darkMode ? " color-primary" : "")
+                  }
+                >
+                  Mahbubul Haque
+                </div>
                 <div className="about-institute">
                   Computer Science and Engineering Student &#183; BUET
                 </div>
@@ -48,7 +86,13 @@ const Home = () => {
               </>
             ) : (
               <>
-                <div className={"h3 about-name mb-2 " + (darkMode? " color-primary": "")} >মাহবুবুল হক</div>
+                <div
+                  className={
+                    "h3 about-name mb-2 " + (darkMode ? " color-primary" : "")
+                  }
+                >
+                  মাহবুবুল হক
+                </div>
                 <div className="about-institute">
                   কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং &#183; বুয়েট
                 </div>
@@ -109,6 +153,74 @@ const Home = () => {
           </Stack>
         </Col>
       </Row>
+      <div className="row row-cols-1 row-cols-md-2 g-4 mt-5">
+        <div className="col">
+          <div
+            className={
+              "card h-100 home-card " + (darkMode ? " color-primary" : "")
+            }
+          >
+            <div className="full-stack-top "></div>
+            <div className="home-card-image mb-0">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190626123927/untitlsssssed.png"
+                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
+                className="img-thumbnail img-fluid m-0"
+                alt="Full Stack Developer"
+              />
+            </div>
+            <div className="home-card-body">
+              <h5 className="home-card-title mt-0">Full Stack Web Developer</h5>
+              <p className="home-card-text mb-4">
+                More than 3 years of experience{" "}
+              </p>
+              <button
+                className="btn btn-primary btn-sm"
+                onClick={() => {
+                  navigate("/skills");
+                }}
+              >
+                See my skills
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div
+            className={
+              "card h-100 home-card home-card1" +
+              (darkMode ? " color-primary" : "")
+            }
+          >
+            <div className="full-stack-top full-stack-top1"></div>
+            <div className="home-card-image mb-0">
+              <img
+                src="https://www.publichealthnotes.com/wp-content/uploads/2020/03/project-planning-header@2x.png"
+                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
+                className="img-thumbnail img-fluid m-0"
+                alt="Full Stack Developer"
+              />
+            </div>
+            <div className="home-card-body">
+              <h5 className="home-card-title mt-0">
+                Worked on some amzing projects
+              </h5>
+              <p className="home-card-text mb-4">
+                I have worked on both individual and team projects{" "}
+              </p>
+              <button
+                className="btn btn-primary btn-sm card-btn1"
+          
+                onClick={() => {
+                  navigate("/projects");
+                }}
+              >
+                See my projects
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 };

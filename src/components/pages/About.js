@@ -48,9 +48,10 @@ const About = () => {
             <div>
               {/*want to  pursue carear in web development, full time or part time remote job*/}
               I am looking for a full-time or part-time{" "}
-              <strong>remote job</strong> in Web Development. I am also open to
+               job in Web Development. I am also open to
               internship opportunities.
             </div>
+            <div>Thanks for reading!</div>
           </Stack>
         </Col>
       </Row>

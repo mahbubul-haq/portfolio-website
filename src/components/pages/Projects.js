@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -9,7 +9,12 @@ import { DarkModeContext } from "../context/DarkModeContext";
 import "./cssFiles/About.css";
 
 const Projects = () => {
-  const { darkMode } = React.useContext(DarkModeContext);
+  const { darkMode,  setPage } = React.useContext(DarkModeContext);
+
+  useEffect(() => {
+    setPage(3);
+  }, []);
+
 
   return (
     <Container fluid className="common-container">
@@ -78,6 +83,7 @@ const Projects = () => {
                               width: "100%",
                               height: "auto",
                               minHeight: "250px",
+                              maxHeight: "250px",
                             }}
                             className="img-fluid"
                           />
@@ -91,10 +97,10 @@ const Projects = () => {
                             (darkMode ? " color-primary" : "")
                           }
                         >
-                          {curProject.title}{" "}
+                          {curProject.title}
                           {curProject.titleLink ? (
                             <>
-                              {"- "}
+                              {" - "}
                               <a
                                 className="custom-a"
                                 href={curProject.titleLink.link}
@@ -102,6 +108,25 @@ const Projects = () => {
                                 rel="noreferrer"
                               >
                                 {curProject.titleLink.text}
+                                {/* <span className="link-icon ms-2">
+                                  <FaLink className="mb-1 p-0" size={16} />
+                                </span> */}
+                              </a>
+                            </>
+                          ) : null}
+                          {curProject.githubLink ? (
+                            <>
+                              {" - "}
+                              <a
+                                className="custom-a"
+                                href={curProject.githubLink}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                Github Link
+                                {/* <span className="link-icon ms-2">
+                                  <FaLink className="mb-1 p-0" size={16} />
+                                </span> */}
                               </a>
                             </>
                           ) : null}
@@ -150,17 +175,6 @@ const Projects = () => {
                             })}
                           </ul>
                         </div>
-                        <div>
-                          <span className="fw-bold"> </span>
-                          <a
-                            className="custom-a"
-                            href="#"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Github Link:
-                          </a>
-                        </div>
                       </Col>
                     </Row>
                   );
@@ -169,8 +183,6 @@ const Projects = () => {
             </Col>
           );
         })}
-
-        
       </Row>
     </Container>
   );

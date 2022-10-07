@@ -35,8 +35,13 @@ const Contact = () => {
                 className={
                   "card h-100 " + (darkMode ? "text-bg-dark" : "text-bg-light")
                 }
+                
               >
-                <div className="card-body">
+                <div
+                  className={
+                    "card-body p-4" + (darkMode ? " color-primary" : "")
+                  }
+                >
                   <div className="text-center">
                     <AiOutlineMail className="mb-2" size={30} />
                   </div>
@@ -61,7 +66,11 @@ const Contact = () => {
                   "card h-100 " + (darkMode ? "text-bg-dark" : "text-bg-light")
                 }
               >
-                <div className="card-body">
+                <div
+                  className={
+                    "card-body p-4" + (darkMode ? " color-primary" : "")
+                  }
+                >
                   <div className="text-center">
                     <AiOutlinePhone className="mb-2" size={30} />
                   </div>
@@ -87,7 +96,11 @@ const Contact = () => {
                   "card h-100 " + (darkMode ? "text-bg-dark" : "text-bg-light")
                 }
               >
-                <div className="card-body">
+                <div
+                  className={
+                    "card-body p-4" + (darkMode ? " color-primary" : "")
+                  }
+                >
                   <div className="text-center">
                     <AiOutlineWhatsApp className="mb-2" size={30} />
                   </div>
@@ -112,7 +125,11 @@ const Contact = () => {
                   "card h-100 " + (darkMode ? "text-bg-dark" : "text-bg-light")
                 }
               >
-                <div className="card-body">
+                <div
+                  className={
+                    "card-body p-4" + (darkMode ? " color-primary" : "")
+                  }
+                >
                   <div className="text-center">
                     <GoLocation className="mb-2" size={30} />
                   </div>

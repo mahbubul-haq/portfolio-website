@@ -79,7 +79,7 @@ const Skills = () => {
                                   style={{ height: "10px"}}
                                 >
                                   <div
-                                    className="progress-bar bg-info m-0 p-0"
+                                    className="progress-bar bg-info  m-0 p-0"
                                     role="progressbar"
                                     aria-valuemin={0}
                                     aria-valuenow={current.progress}
@@ -96,7 +96,7 @@ const Skills = () => {
                               </div>
                             </>
                           ) : (
-                            <div key={index1} className="col-auto me-2">
+                            <div key={index1} className="col-auto me-1">
                               {current.name}
                               {index1 !== skill.list.length - 1 ? "," : ""}
                             </div>

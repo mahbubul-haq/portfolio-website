@@ -263,7 +263,8 @@ export const projectsInfo = [
         demonstration: {
           showVideo: false,
           embedLink: "",
-          imgLink: "",
+          imgLink:
+            "images/portfolio-thumbnail.PNG",
         },
       },
     ],
@@ -276,13 +277,13 @@ export const projectsInfo = [
         title: "Travel Bug - Travel & Tourism Website",
         role: "Frontend, Backend, Host(everything), Messaging, Schema, ERD, Class Diagram",
         technology:
-          " Nodejs, Express, React, MongoDB, Bootstrap, CSS, JWT, Stripe",
+          " NodeJs, Express, React, MongoDB, Bootstrap, CSS, JWT, Stripe",
         description: `Travel Bug is a travel and tourism website. It is a platform for hosting
                 experiences, booking experiences, and providing transport guidelines. This project was 
                 made for Software Developmment Sessional course along with two other team members.
                 `,
         features: [
-          "Hosting Experiences, booking experiences",
+          "Hosting experiences, Booking experiences",
           "Providing Transport Guidelines",
           "Payment Gateway through Stripe",
           "Messaging System, Authentication",
@@ -361,7 +362,10 @@ export const projectsInfo = [
         description: `DX BALL Game is a single player multi level game. It has different levels and different types of
                 bricks. This project was made for Structured Programming Language Sessional course.
                 `,
-        features: ["Different Levels, different types of bricks", "Smooth gameplay"],
+        features: [
+          "Different Levels, different types of bricks",
+          "Smooth gameplay",
+        ],
         githubLink: "https://github.com/mahbubul-haq/DX-BALL-Game",
         demonstration: {
           showVideo: true,

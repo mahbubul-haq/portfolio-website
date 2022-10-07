@@ -48,6 +48,7 @@
   max-width: 1000px;
   padding: 20px 20px 50px 20px;
   /* border: 2px solid red; */
+  z-index: 10;
 }
 .home-link {
   color: rgba(255, 255, 255, 1);
@@ -129,6 +130,80 @@
 
 .custom-embed {
   background-color: black;
+}
+
+.custom-a .link-icon {
+  visibility: hidden;
+}
+
+.custom-a:hover .link-icon {
+  visibility: visible;
+}
+
+.full-stack-top {
+  background-color: rgb(72, 137, 230);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(72, 137, 230),
+    rgb(16, 136, 187)
+  );
+  height: 100px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.full-stack-top1 {
+  background-color: rgb(230, 72, 177);
+  background-image: linear-gradient(
+    to bottom,
+    var(--navbar-active-hover),
+    var(--navbar-active-hover1)
+  );
+}
+.home-card-image {
+  transform: translateY(-50%);
+}
+
+.home-card {
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px 0 rgba(70, 80, 158, 0.5);
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.home-card1 {
+  box-shadow: 2px 4px 8px 0 rgba(152, 62, 110, 0.5);
+}
+
+.home-card:hover {
+  box-shadow: 4px 8px 10px 0 rgba(70, 80, 158, 0.5);
+}
+.home-card1:hover {
+  box-shadow: 4px 8px 10px 0 rgba(152, 62, 110, 0.5);
+}
+
+.home-card-body {
+  padding: 15px;
+  margin-top: -25px;
+}
+
+.home-card-title {
+  margin-bottom: 20px;
+}
+
+.card-btn1 {
+  background-color: var(--navbar-active-hover1);
+  border-color: var(--navbar-active-hover1);
+  outline-color: var(--navbar-active-hover1);
+}
+
+.card-btn1:hover {
+  background-color: var(--navbar-active-hover);
+  border-color: var(--navbar-active-hover);
+  outline-color: var(--navbar-active-hover);
 }
 
 @media screen and (max-width: 768px) {

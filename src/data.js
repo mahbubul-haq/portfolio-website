@@ -384,8 +384,10 @@ export const homeCards = [
     cardClass: "home-card0",
     cardTopClass: "full-stack-top0",
     cardButtonClass: "card-btn0",
-    imgSrc: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190626123927/untitlsssssed.png",
-    buttonText: "See my skills"
+    imgSrc:
+      "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190626123927/untitlsssssed.png",
+    buttonText: "See my skills",
+    navigateTo: "skills",
   },
   {
     title: "Worked on Some Amazing Projects",
@@ -393,8 +395,10 @@ export const homeCards = [
     cardClass: "home-card1",
     cardTopClass: "full-stack-top1",
     cardButtonClass: "card-btn1",
-    imgSrc: "https://www.publichealthnotes.com/wp-content/uploads/2020/03/project-planning-header@2x.png",
-    buttonText: "See my projects"
+    imgSrc:
+      "https://www.publichealthnotes.com/wp-content/uploads/2020/03/project-planning-header@2x.png",
+    buttonText: "See my projects",
+    navigateTo: "projects",
   },
   {
     title: "Expert in Data Structures and Algorithms",
@@ -402,9 +406,23 @@ export const homeCards = [
     cardClass: "home-card2",
     cardTopClass: "full-stack-top2",
     cardButtonClass: "card-btn2",
-    imgSrc: "https://www.educative.io/api/page/5668639106519040/image/download/5668639106519040",
+    imgSrc:
+      "https://www.educative.io/v2api/editorpage/5323562194829312/image/4539157721382912",
     buttonText: "See in Github",
-  }
+    link: "https://github.com/mahbubul-haq/ImplementedAlgorithms",
+  },
+  {
+    title: "Expert in Problem Solving",
+    description: "Solved 1500+ problems in different OJs",
+    cardClass: "home-card3",
+    cardTopClass: "full-stack-top3",
+    cardButtonClass: "card-btn3",
+    imgSrc:
+      "https://transportfutures.institute/wp-content/uploads/2019/07/ideal_image.png",
+    buttonText: "See solved list",
+    navigateTo: "experience",
+    state: { solve: true},
+  },
 ];
 
 

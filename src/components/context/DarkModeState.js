@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
 const DarkModeState = (props) => {
-    const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") !== null ? localStorage.getItem("darkMode") === "true" : false);
+    const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") === "true"? true : false);
     const [page, setPage] = useState(localStorage.getItem("page") !== null ? parseInt(localStorage.getItem("page")) : 0);
 
 

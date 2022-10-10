@@ -24,8 +24,8 @@ const About = () => {
               Hi,
               <br></br>I am Mahbubul Haque, an undergraduate Computer Science
               and Engineering student at{" "}
-              <a className="button-link" href="https://www.buet.ac.bd/">
-                Bangladesh University of Engineering and Technology (BUET){" "}
+              <a className="custom-a" href="https://www.buet.ac.bd/">
+                Bangladesh University of Engineering and Technology (BUET)
               </a>
               . I am an enthusiastic Programmer. I love to solve problems and
               learn new things.

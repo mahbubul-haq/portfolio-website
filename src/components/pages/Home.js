@@ -7,6 +7,7 @@ import Stack from "react-bootstrap/Stack";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { SiCodeforces, SiGithub } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import { homeCards } from "../../data";
 import { DarkModeContext } from "../context/DarkModeContext";
 import "../nav/Nav.css";
 import "./cssFiles/About.css";
@@ -154,173 +155,61 @@ const Home = () => {
         </Col>
       </Row>
       <div className="row row-cols-1 row-cols-md-2 g-4 mt-5">
-        <div className="col">
+        
+        {homeCards.map((card, index) => {
+          return (
+        <div className="col" key={index}>
           <div
             className={
-              "card h-100 home-card " + (darkMode ? " color-primary" : "")
+              "card h-100 home-card " + card.cardClass + (darkMode ? " color-primary" : "")
             }
           >
-            <div className="full-stack-top "></div>
+            <div className={"full-stack-top " + card.cardTopClass}></div>
             <div className="home-card-image mb-0">
               <img
-                src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190626123927/untitlsssssed.png"
+                src={card.imgSrc}
                 style={{ width: "90px", height: "90px", borderRadius: "50%" }}
                 className="img-thumbnail img-fluid m-0"
-                alt="Full Stack Developer"
+                alt="..."
               />
             </div>
             <div className="card-body home-card-body">
-              <h4 className="home-card-title mt-0">Full Stack Web Developer</h4>
+              <h4 className="home-card-title mt-0">{card.title}</h4>
               <p
                 className={
                   "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
                 }
               >
-                More than 3 years of experience in this field{" "}
+                {card.description}
               </p>
             </div>
             <div
               className={"card-footer" + (darkMode ? " home-card-footer" : "")}
             >
-              <button
-                className="btn btn-primary btn-sm card-btn0"
+              { card.navigateTo ? (<button
+                className={"btn btn-primary btn-sm " + card.cardButtonClass}
                 onClick={() => {
-                  navigate("/skills");
+                  navigate("/" + card.navigateTo, card.state ? {state: card.state} : {});
                 }}
               >
-                See my skills
+                {card.buttonText}
               </button>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div
-            className={
-              "card h-100 home-card home-card1" +
-              (darkMode ? " color-primary" : "")
-            }
-          >
-            <div className="full-stack-top full-stack-top1"></div>
-            <div className="home-card-image mb-0">
-              <img
-                src="https://www.publichealthnotes.com/wp-content/uploads/2020/03/project-planning-header@2x.png"
-                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
-                className="img-thumbnail img-fluid m-0"
-                alt="Full Stack Developer"
-              />
-            </div>
-            <div className="card-body home-card-body">
-              <h4 className="home-card-title mt-0">
-                Worked on some amazing projects
-              </h4>
-              <p
-                className={
-                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
-                }
+          ) : (<a
+                href={card.link}
+                target="_blank"
+                rel="noreferrer"
+                className={"btn btn-primary btn-sm " + card.cardButtonClass}  
               >
-                I have worked on both individual and team projects{" "}
-              </p>
-            </div>
-            <div
-              className={"card-footer " + (darkMode ? "home-card-footer" : "")}
-            >
-              <button
-                className="btn btn-primary btn-sm card-btn1"
-                onClick={() => {
-                  navigate("/projects");
-                }}
-              >
-                See my projects
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="col">
-          <div
-            className={
-              "card h-100 home-card home-card2" +
-              (darkMode ? " color-primary" : "")
-            }
-          >
-            <div className="full-stack-top full-stack-top2"></div>
-            <div className="home-card-image mb-0">
-              <img
-                src="https://www.educative.io/v2api/editorpage/5323562194829312/image/4539157721382912"
-                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
-                className="img-thumbnail img-fluid m-0"
-                alt="Full Stack Developer"
-              />
-            </div>
-            <div className="card-body home-card-body">
-              <h4 className="home-card-title mt-0">
-                Expert in Data Structures and Algorithms
-              </h4>
-              <p
-                className={
-                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
-                }
-              >
-                Experienced in implementation and analysis
-              </p>
-            </div>
-            <div
-              className={"card-footer " + (darkMode ? "home-card-footer" : "")}
-            >
-              <a
-                role="button"
-                className="btn btn-primary btn-sm card-btn2"
-                href="https://github.com/mahbubul-haq/ImplementedAlgorithms"
-              >
-                See in Github
+                {card.buttonText}
               </a>
-            </div>
-          </div>
-        </div>
+          )}
 
-        <div className="col">
-          <div
-            className={
-              "card h-100 home-card home-card3" +
-              (darkMode ? " color-primary" : "")
-            }
-          >
-            <div className="full-stack-top full-stack-top3"></div>
-            <div className="home-card-image mb-0">
-              <img
-                src="https://transportfutures.institute/wp-content/uploads/2019/07/ideal_image.png"
-                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
-                className="img-thumbnail img-fluid m-0"
-                alt="Full Stack Developer"
-              />
-            </div>
-            <div className="card-body home-card-body">
-              <h4 className="home-card-title mt-0">
-                Expert in Problem Solving
-              </h4>
-              <p
-                className={
-                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
-                }
-              >
-                Solved 1500+ problems in different OJs
-              </p>
-            </div>
-            <div
-              className={"card-footer " + (darkMode ? "home-card-footer" : "")}
-            >
-              <button
-                className="btn btn-primary btn-sm card-btn3"
-                onClick={() => {
-                  //send state with navigate
-                  navigate("/experience", { state: { solve: true } });
-                }}
-              >
-                See solved list
-              </button>
             </div>
           </div>
         </div>
+          );
+        })}
+        
       </div>
     </Container>
   );

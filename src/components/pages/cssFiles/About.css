@@ -48,7 +48,7 @@
   max-width: 1000px;
   padding: 20px 20px 50px 20px;
   /* border: 2px solid red; */
-  z-index: 10;
+  z-index: 1;
 }
 .home-link {
   color: rgba(255, 255, 255, 1);
@@ -120,9 +120,9 @@
   /* anchor link color */
   color: #0d6efd;
   text-decoration: underline;
-  display: inline-block;
+  display: inline;
   line-height: 100%;
-  font-weight: 600;
+  font-weight: 500;
 }
 .button-link:hover {
   background-color: rgb(167, 58, 122);
@@ -158,8 +158,8 @@
   background-color: rgb(230, 72, 177);
   background-image: linear-gradient(
     to bottom,
-    var(--navbar-active-hover),
-    var(--navbar-active-hover1)
+    rgb(200, 22, 75),
+    rgb(228, 63, 115)
   );
 }
 .full-stack-top2 {
@@ -231,6 +231,8 @@
 
 .card-btn0 {
   background-color: rgb(16, 136, 187);
+  border-color: rgb(16, 136, 187);
+  outline-color: rgb(16, 136, 187);
 }
 
 .card-btn0:hover,
@@ -238,12 +240,14 @@
 .card-btn0:active,
 .card-btn0:visited {
   background-color: rgb(72, 137, 230);
+  border-color: rgb(72, 137, 230);
+  outline-color: rgb(72, 137, 230);
 }
 
 .card-btn1 {
-  background-color: var(--navbar-active-hover1);
-  border-color: var(--navbar-active-hover1);
-  outline-color: var(--navbar-active-hover1);
+  background-color: rgb(228, 63, 115);
+  border-color: rgb(228, 63, 115);
+  outline-color: rgb(228, 63, 115);
 }
 
 .card-btn1:hover,

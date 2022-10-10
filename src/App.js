@@ -30,11 +30,13 @@ function App() {
         element.style.opacity = "1";
         element.style.cursor = "pointer";
         element.style.zIndex = "100";
+        element.style.bottom = "20px";
       } else {
         
         element.style.opacity = "0";
         element.style.cursor = "default";
         element.style.zIndex = "0";
+        element.style.bottom = "-50px";
       }
     };
     let element1 = document.getElementById("outer-container-scroll");

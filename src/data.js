@@ -264,7 +264,8 @@ export const projectsInfo = [
           showVideo: false,
           embedLink: "",
           imgLink:
-            "images/portfolio-thumbnail.PNG",
+            "images/website_normal.png",
+          imgLinkDark: "images/website_dark.png",
         },
       },
     ],
@@ -424,5 +425,126 @@ export const homeCards = [
     state: { solve: true},
   },
 ];
+
+
+export const resumeExperience = [
+  {
+    type: "Problem Solving",
+    list: ["Solved 1500+ problems in different Online Judges."],
+  },
+  {
+    type: "Competitive Programming",
+    list: [
+      "I was an active competitive programmer in different Online Judges especially in Codeforces.",
+    ],
+  },
+  {
+    type: "Algorithm Learning",
+    list: [
+      "Learned and implemented large numbers of Algorithms & Data Structures.",
+    ],
+    link: "https://github.com/mahbubul-haq/ImplementedAlgorithms",
+    linkText: "Github Link",
+
+  },
+];
+
+export const resumeEducation = [
+  {
+    institution: "Bangladesh University of Engineering and Technology (BUET)",
+    degree: "Bachelor of Science in Computer Science and Engineering",
+    duration: "2017 - Present",
+    address: "Dhaka, Bangladesh",
+  }
+]
+
+export const resumeSkills = [
+  {
+    skillType: "Languages",
+    skills: "JavaScript, Python, C++, Java, CSS, HTML",
+  },
+  {
+    skillType: "Frameworks",
+    skills: "NodeJs, Express, React, Bootstrap, Django, Django Rest Framework",
+  },
+  {
+    skillType: "Database",
+    skills: "MongoDB, Oracle, PostgreSQL",
+  },
+  {
+    skillType: "Tools",
+    skills: "Git, Github, Linux",
+  },
+  {
+    skillType: "Others",
+    skills: "Data Structures, Algorithms, Competitive Programming, Problem Solving",
+  },
+];
+
+export const resumeProjects = [
+  {
+    title: "Travel & Tourism Website",
+    technology: "NodeJS, Express, React, MongoDB, Bootstrap, CSS, Stripe",
+    features: [
+      `A website for hosting personal experiences, booking experiences and providing detailed 
+transport guidelines for travelling a particular place.`,
+      `Solves travel related inconvenience and provides an amazing experience for travelers.`,
+    ],
+    year: "2022",
+    link: "https://github.com/mahbubul-haq/Travel-Bug-Airbnb",
+    linkText: "Github Link",
+  },
+  {
+    title: "Ride Sharing & Car Rental Website",
+    technology: "Django, Oracle, Python, JavaScript, Bootstrap, CSS, HTML, Leaflet",
+    features: [
+      "A website for ride sharing and car rental service.",
+      "Makes day to day life transportation easier for people of all ages.",
+    ],
+    year: "2020",
+    link: "https://github.com/mahbubul-haq/UBER-Ride-Sharing-Service",
+    linkText: "Github Link",
+  },
+  {
+    title: "Personal Portfolio Website",
+    technology: "React, Bootstrap, CSS",
+    year: "2022",
+    link: "https://mahbubul-haq.github.io/",
+    linkText: "Website Link",
+  },
+  {
+    title: "Smart Room Simulation",
+    technology: "C, Atmega32",
+    year: "2021",
+    features: [
+      "Simulation of a smart room with different sensors, automatic, manual and remote controls.",
+    ],
+    link: "https://github.com/mahbubul-haq/Smart-Room-Simulation",
+    linkText: "Github Link",
+  },
+  {
+    title: "Network Car Racing Game",
+    technology: "Java, JavaFX, Socket Programming",
+    year: "2018",
+    features: [
+      "Multiplayer 2D Car racing game which can be played by connecting two devices.",
+    ]
+    ,
+    link: "https://github.com/mahbubul-haq/Network-Car-Racing-Game",
+    linkText: "Github Link",
+  },
+  {
+    title: "DX Ball Game",
+    technology: "C, iGraphics.h",
+    year: "2017",
+    features: [
+      "Single player multilevel 2D game developed using iGraphics library.",
+    ],
+    link: "https://github.com/mahbubul-haq/DX-BALL-Game",
+    linkText: "Github Link",
+  },
+];
+
+
 
 

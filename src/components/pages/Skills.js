@@ -99,7 +99,10 @@ const Skills = () => {
                             <div
                               key={index1}
                               className="col-auto me-1"
-                              style={{ fontFamily: "Raleway, sans-serif" }}
+                              style={{
+                                fontFamily:
+                                  "Verdana, Geneva, Tahoma, sans-serif",
+                              }}
                             >
                               {current.name}
                               {index1 !== skill.list.length - 1 ? "," : ""}

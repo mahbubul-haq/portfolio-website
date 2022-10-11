@@ -77,7 +77,7 @@ const Projects = () => {
                           ></iframe>
                         ) : (
                           <img
-                            src={curProject.demonstration.imgLink}
+                            src={(darkMode ? curProject.demonstration.imgLinkDark : curProject.demonstration.imgLink)}
                             alt=""
                             style={{
                               width: "100%",

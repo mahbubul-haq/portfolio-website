@@ -19,7 +19,9 @@ const About = () => {
       <Row className="mt-2 mt-md-3 mt-lg-4">
         <Col>
           <Stack gap={2} className="paragraph-decoration">
-            <div className={"h2 text-center" + (darkMode? " color-primary": "") }>About Me</div>
+            <div className={"h2  text-center" + (darkMode? " color-primary": "") }
+             style={{fontFamily: "Verdana, Geneva, Tahoma, sans-serif"}}
+            >About Me</div>
             <div className="">
               Hi,
               <br></br>I am Mahbubul Haque, an undergraduate Computer Science

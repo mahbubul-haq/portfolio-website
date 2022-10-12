@@ -22,6 +22,7 @@ const Projects = () => {
         <Col xs={12}>
           <div
             className={"h2 text-center" + (darkMode ? " color-primary" : "")}
+            style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
           >
             My Projects
           </div>
@@ -77,7 +78,11 @@ const Projects = () => {
                           ></iframe>
                         ) : (
                           <img
-                            src={(darkMode ? curProject.demonstration.imgLinkDark : curProject.demonstration.imgLink)}
+                            src={
+                              darkMode
+                                ? curProject.demonstration.imgLinkDark
+                                : curProject.demonstration.imgLink
+                            }
                             alt=""
                             style={{
                               width: "100%",

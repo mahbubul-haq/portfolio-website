@@ -45,6 +45,7 @@ const Skills = () => {
           <Stack gap={2} className="paragraph-decoration">
             <div
               className={"h2 text-center" + (darkMode ? " color-primary" : "")}
+              style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
             >
               My Skills
             </div>

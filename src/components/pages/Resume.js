@@ -42,10 +42,11 @@ const Resume = () => {
           >
             <div
               className={"h2 text-center" + (darkMode ? " color-primary" : "")}
+              style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
             >
               My Resume
             </div>
-            <div className="text-start">
+            <div className="text-center mt-3">
               <button
                 className={
                   "btn download-pdf " + (darkMode ? " download-pdf-dark" : "")
@@ -176,9 +177,10 @@ const Resume = () => {
                         }
                       >
                         {experience.type}
+
                         {experience.link ? (
-                          <>
-                            {" - "}
+                          <div className="m-0 p-0 ps-1">
+                            <span>{" - "}</span>
                             <a
                               href={experience.link}
                               className="button-link"
@@ -187,7 +189,7 @@ const Resume = () => {
                             >
                               {experience.linkText}
                             </a>
-                          </>
+                          </div>
                         ) : null}
                       </div>
                       <ul>

@@ -297,34 +297,39 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: background-color 0.3s ease-in-out, outline-color 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
-  background-color: rgb(35, 110, 201);
-  border-color: rgb(35, 110, 201);
-  outline-color: rgb(35, 110, 201);
-  color: white;
-}
 
-.download-pdf:hover,
-.download-pdf:focus,
-.download-pdf:active {
   background-color: rgb(72, 138, 218);
   outline-color: rgb(72, 138, 218);
   border-color: rgb(72, 138, 218);
   color: white;
 }
 
+.download-pdf:hover,
+.download-pdf:focus,
+.download-pdf:active {
+  background-color: rgb(17, 90, 178);
+  border-color: rgb(17, 90, 178);
+  outline-color: rgb(17, 90, 178);
+  color: white;
+}
+
 .download-pdf-dark {
-  background-color: rgb(207, 56, 122);
+  /* background-color: rgb(207, 56, 122);
   border-color: rgb(207, 56, 122);
-  outline-color: rgb(207, 56, 122);
+  outline-color: rgb(207, 56, 122); */
 }
 
 .download-pdf-dark:hover,
 .download-pdf-dark:focus,
 .download-pdf-dark:active {
-  background-color: var(--navbar-active-hover2);
+  /* background-color: var(--navbar-active-hover2);
   outline-color: var(--navbar-active-hover2);
   border-color: var(--navbar-active-hover2);
-  color: white;
+  color: white; */
+}
+
+.opacity-70 {
+  opacity: 70%;
 }
 
 @media screen and (max-width: 768px) {

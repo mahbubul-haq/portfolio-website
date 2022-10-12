@@ -75,6 +75,7 @@ const Home = () => {
                   className={
                     "h3 about-name mb-2" + (darkMode ? " color-primary" : "")
                   }
+                  style={{fontFamily: "Verdana, Geneva, Tahoma, sans-serif"}}
                 >
                   Mahbubul Haque
                 </div>
@@ -164,7 +165,7 @@ const Home = () => {
               "card h-100 home-card " + card.cardClass + (darkMode ? " color-primary" : "")
             }
           >
-            <div className={"full-stack-top " + card.cardTopClass}></div>
+            <div className={"full-stack-top " + card.cardTopClass + (darkMode? " opacity-70":"")}></div>
             <div className="home-card-image mb-0">
               <img
                 src={card.imgSrc}

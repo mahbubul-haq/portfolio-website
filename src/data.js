@@ -263,8 +263,7 @@ export const projectsInfo = [
         demonstration: {
           showVideo: false,
           embedLink: "",
-          imgLink:
-            "images/website_normal.png",
+          imgLink: "images/website_normal.png",
           imgLinkDark: "images/website_dark.png",
         },
       },
@@ -420,9 +419,8 @@ export const homeCards = [
     cardButtonClass: "card-btn3",
     imgSrc:
       "https://transportfutures.institute/wp-content/uploads/2019/07/ideal_image.png",
-    buttonText: "See solved list",
-    navigateTo: "experience",
-    state: { solve: true},
+    buttonText: "See in Github",
+    link: "https://github.com/mahbubul-haq/MySolvedProblems",
   },
 ];
 
@@ -431,6 +429,8 @@ export const resumeExperience = [
   {
     type: "Problem Solving",
     list: ["Solved 1500+ problems in different Online Judges."],
+    link: "https://github.com/mahbubul-haq/MySolvedProblems",
+    linkText: "Github Link",
   },
   {
     type: "Competitive Programming",
@@ -445,7 +445,6 @@ export const resumeExperience = [
     ],
     link: "https://github.com/mahbubul-haq/ImplementedAlgorithms",
     linkText: "Github Link",
-
   },
 ];
 

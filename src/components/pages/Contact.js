@@ -21,6 +21,7 @@ const Contact = () => {
             className={
               "h2 text-center mb-3" + (darkMode ? " color-primary" : "")
             }
+            style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
           >
             My Contacts
           </div>
@@ -35,7 +36,6 @@ const Contact = () => {
                 className={
                   "card h-100 " + (darkMode ? "text-bg-dark" : "text-bg-light")
                 }
-                
               >
                 <div
                   className={

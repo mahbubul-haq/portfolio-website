@@ -51,6 +51,7 @@ const Experience = () => {
         <Col xs={12}>
           <div
             className={"h2 text-center" + (darkMode ? " color-primary" : "")}
+            style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
           >
             My Experience
           </div>

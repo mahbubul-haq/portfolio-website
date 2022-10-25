@@ -345,7 +345,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: rgb(16, 136, 187);
-  color: var(--navbar-active-hover);
+  color: var(--navbar-active-hover1);
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;

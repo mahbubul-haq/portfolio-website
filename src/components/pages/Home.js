@@ -25,13 +25,28 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const typewriter = new Typewriter(".love-programming", {
-      strings: ["is in love with programming"],
+    // const typewriter = new Typewriter(".love-programming", {
+    //   strings: ["is in love with programming"],
+    //   loop: false,
+    //   delay: 100,
+    //   deleteSpeed: 25,
+    //   pauseFor: 10000,
+    //   autoStart: true,
+    // });
+
+    const typewriter1 = new Typewriter(".my-work", {
+      strings: ["Full Stack Web Developer", "Competitive Programmer"],
       loop: true,
-      delay: 75,
-      pauseFor: 2000,
+      delay: 50,
+      deleteSpeed: 20,
+      pauseFor: 2500,
       autoStart: true,
     });
+
+    return () => {
+      // typewriter.stop();
+      typewriter1.stop();
+    };
   }, []);
 
 
@@ -89,16 +104,18 @@ const Home = () => {
                   }
                   style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
                 >
-                  Mahbubul Haque
+                  Mahbubul <span className="haque">Haque</span>
                 </div>
 
-                <div className="love-programming m-0 p-0 fw-bold"></div>
+                <div className="love-programming m-0 p-0">
+                  is in love with programming
+                </div>
 
                 {/* <div className="about-institute">
                   Computer Science and Engineering Student &#183; BUET
                 </div> */}
                 <div className="about-work mt-3">
-                  A Full Stack Web Developer &#183; A Competitive Programmer
+                  I'm a <span className="my-work"></span>
                 </div>
               </>
             ) : (
@@ -249,6 +266,7 @@ const Home = () => {
                       href={card.link}
                       target="_blank"
                       rel="noreferrer"
+                      role="button"
                       className={
                         "btn btn-primary btn-sm " + card.cardButtonClass
                       }

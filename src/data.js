@@ -392,9 +392,9 @@ export const homeCards = [
   {
     title: "Worked on Some Amazing Projects",
     description: "I have worked on both individual and team projects",
-    cardClass: "home-card1",
-    cardTopClass: "full-stack-top1",
-    cardButtonClass: "card-btn1",
+    cardClass: "home-card0",
+    cardTopClass: "full-stack-top0",
+    cardButtonClass: "card-btn0",
     imgSrc:
       "https://www.publichealthnotes.com/wp-content/uploads/2020/03/project-planning-header@2x.png",
     buttonText: "See my projects",
@@ -403,9 +403,9 @@ export const homeCards = [
   {
     title: "Expert in Data Structures and Algorithms",
     description: "Experienced in implementation and analysis",
-    cardClass: "home-card2",
-    cardTopClass: "full-stack-top2",
-    cardButtonClass: "card-btn2",
+    cardClass: "home-card0",
+    cardTopClass: "full-stack-top0",
+    cardButtonClass: "card-btn0",
     imgSrc:
       "https://www.educative.io/v2api/editorpage/5323562194829312/image/4539157721382912",
     buttonText: "See in Github",
@@ -414,9 +414,9 @@ export const homeCards = [
   {
     title: "Expert in Problem Solving",
     description: "Solved 1500+ problems in different OJs",
-    cardClass: "home-card3",
-    cardTopClass: "full-stack-top3",
-    cardButtonClass: "card-btn3",
+    cardClass: "home-card0",
+    cardTopClass: "full-stack-top0",
+    cardButtonClass: "card-btn0",
     imgSrc:
       "https://transportfutures.institute/wp-content/uploads/2019/07/ideal_image.png",
     buttonText: "See in Github",

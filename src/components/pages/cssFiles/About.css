@@ -9,8 +9,15 @@
 }
 
 .about-name {
-  font-size: 170%;
+  font-size: 190%;
   font-weight: 700;
+  color: rgb(31, 168, 226);
+  -webkit-text-stroke: 1px rgb(31, 168, 226);
+}
+
+.haque {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(31, 168, 226);
 }
 .about-institute {
   font-size: 1.4rem;
@@ -239,12 +246,12 @@
 
 .card-btn0:hover,
 .card-btn0:focus,
-.card-btn0:active,
-.card-btn0:visited {
+.card-btn0:active {
   background-color: rgb(72, 137, 230);
   border-color: rgb(72, 137, 230);
   outline-color: rgb(72, 137, 230);
 }
+
 
 .card-btn1 {
   background-color: rgb(228, 63, 115);
@@ -335,13 +342,19 @@
 }
 .love-programming {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
   color: rgb(16, 136, 187);
-  /* color: var(--navbar-active-hover); */
+  color: var(--navbar-active-hover);
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.my-work {
+  color: var(--navbar-active-hover);
+  opacity: 100%;
+  font-weight: 700;
 }
 
 .dark-mode-menu {
@@ -350,7 +363,7 @@
 
 @media screen and (max-width: 768px) {
   .about-name {
-    font-size: 140%;
+    font-size: 160%;
   }
   .about-institute {
     font-size: 120%;
@@ -369,13 +382,13 @@
     height: 130px;
   }
   .about-name {
-    font-size: 130%;
+    font-size: 150%;
   }
   .about-institute {
     font-size: 105%;
   }
   .about-work {
-    font-size: 105%;
+    font-size: 90%;
   }
   .paragraph-decoration {
     font-size: 110%;

@@ -4,7 +4,8 @@
 
 .profile-picture {
   width: 180px;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
 }
 
 .about-name {
@@ -18,6 +19,7 @@
 .about-work {
   font-size: 1.4rem;
   font-weight: 500;
+  opacity: 80%;
 }
 
 .home-link {
@@ -329,13 +331,24 @@
 }
 
 .opacity-70 {
-  opacity: 70%;
+  opacity: 60%;
+}
+.love-programming {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(16, 136, 187);
+  /* color: var(--navbar-active-hover); */
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dark-mode-menu {
+  background-color: var(--dark-mode-menu);
 }
 
 @media screen and (max-width: 768px) {
-  .profile-picture {
-    width: 100px;
-  }
   .about-name {
     font-size: 140%;
   }
@@ -348,6 +361,13 @@
 }
 
 @media screen and (max-width: 576px) {
+  .love-programming {
+    font-size: 1rem;
+  }
+  .profile-picture {
+    width: 130px;
+    height: 130px;
+  }
   .about-name {
     font-size: 130%;
   }

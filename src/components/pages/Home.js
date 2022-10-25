@@ -11,6 +11,8 @@ import { homeCards } from "../../data";
 import { DarkModeContext } from "../context/DarkModeContext";
 import "../nav/Nav.css";
 import "./cssFiles/About.css";
+import "./cssFiles/ExtraDesign.css";
+import Typewriter from "typewriter-effect/dist/core";
 
 const Home = () => {
   const { setPage } = React.useContext(DarkModeContext);
@@ -21,6 +23,17 @@ const Home = () => {
   useEffect(() => {
     setPage(0);
   }, []);
+
+  useEffect(() => {
+    const typewriter = new Typewriter(".love-programming", {
+      strings: ["is in love with programming"],
+      loop: true,
+      delay: 75,
+      pauseFor: 2000,
+      autoStart: true,
+    });
+  }, []);
+
 
   return (
     <Container fluid className="common-container">
@@ -58,32 +71,34 @@ const Home = () => {
         <Col className="">
           <Stack className="text-center" gap={1}>
             <div className="mb-4">
-              <Image
-                fluid
-                rounded
-                roundedCircle
-                thumbnail
-                className="profile-picture"
-                src="images/hi.png"
-                alt="Profile Picture"
-              />
+              <div className="home-img-wrapper">
+                <Image
+                  fluid
+                  className="profile-picture"
+                  src="images/hi.png"
+                  alt="Profile Picture"
+                />
+              </div>
             </div>
 
             {isEnglish ? (
               <>
                 <div
                   className={
-                    "h3 about-name mb-2" + (darkMode ? " color-primary" : "")
+                    "h3 about-name mb-0" + (darkMode ? " color-primary" : "")
                   }
-                  style={{fontFamily: "Verdana, Geneva, Tahoma, sans-serif"}}
+                  style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
                 >
                   Mahbubul Haque
                 </div>
-                <div className="about-institute">
+
+                <div className="love-programming m-0 p-0 fw-bold"></div>
+
+                {/* <div className="about-institute">
                   Computer Science and Engineering Student &#183; BUET
-                </div>
-                <div className="about-work">
-                  Full Stack Web Developer &#183; Competitive Programmer
+                </div> */}
+                <div className="about-work mt-3">
+                  A Full Stack Web Developer &#183; A Competitive Programmer
                 </div>
               </>
             ) : (
@@ -112,7 +127,7 @@ const Home = () => {
                     target="_blank"
                     rel="noreferrer"
                     title="LinkedIn"
-                    className="home-link"
+                    className={"home-link" + (darkMode ? " color-primary" : "")}
                   >
                     <FaLinkedinIn size={30} />
                   </a>
@@ -123,7 +138,7 @@ const Home = () => {
                     target="_blank"
                     rel="noreferrer"
                     title="Github"
-                    className="home-link"
+                    className={"home-link" + (darkMode ? " color-primary" : "")}
                   >
                     <SiGithub size={30} />
                   </a>
@@ -134,7 +149,7 @@ const Home = () => {
                     target="_blank"
                     rel="noreferrer"
                     title="Codeforces"
-                    className="home-link"
+                    className={"home-link" + (darkMode ? " color-primary" : "")}
                   >
                     <SiCodeforces size={30} />
                   </a>
@@ -145,7 +160,7 @@ const Home = () => {
                     target="_blank"
                     rel="noreferrer"
                     title="Facebook"
-                    className="home-link"
+                    className={"home-link" + (darkMode ? " color-primary" : "")}
                   >
                     <FaFacebookF size={30} />
                   </a>
@@ -156,61 +171,96 @@ const Home = () => {
         </Col>
       </Row>
       <div className="row row-cols-1 row-cols-md-2 g-4 mt-5">
-        
         {homeCards.map((card, index) => {
           return (
-        <div className="col" key={index}>
-          <div
-            className={
-              "card h-100 home-card " + card.cardClass + (darkMode ? " color-primary" : "")
-            }
-          >
-            <div className={"full-stack-top " + card.cardTopClass + (darkMode? " opacity-70":"")}></div>
-            <div className="home-card-image mb-0">
-              <img
-                src={card.imgSrc}
-                style={{ width: "90px", height: "90px", borderRadius: "50%" }}
-                className="img-thumbnail img-fluid m-0"
-                alt="..."
-              />
-            </div>
-            <div className="card-body home-card-body">
-              <h4 className="home-card-title mt-0">{card.title}</h4>
-              <p
+            <div className="col" key={index}>
+              <div
                 className={
-                  "home-card-text mb-4" + (darkMode ? " color-secondary" : "")
+                  "card h-100 home-card " +
+                  card.cardClass +
+                  (darkMode ? " color-primary" : "")
                 }
               >
-                {card.description}
-              </p>
+                <div
+                  className={
+                    "full-stack-top " +
+                    card.cardTopClass +
+                    (darkMode ? " opacity-70" : "")
+                  }
+                ></div>
+                <div className="home-card-image mb-0 d-flex justify-content-center">
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      width: "90px",
+                      height: "90px",
+                      borderRadius: "50%",
+                      margin: "0",
+                      padding: "0",
+                    }}
+                  >
+                    <img
+                      src={card.imgSrc}
+                      style={{
+                        width: "90px",
+                        height: "90px",
+                        borderRadius: "50%",
+                      }}
+                      className={
+                        "img-thumbnail img-fluid m-0 " +
+                        (darkMode ? "opacity-75" : "")
+                      }
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div className="card-body home-card-body">
+                  <h4 className="home-card-title mt-0">{card.title}</h4>
+                  <p
+                    className={
+                      "home-card-text mb-4" +
+                      (darkMode ? " color-secondary" : "")
+                    }
+                  >
+                    {card.description}
+                  </p>
+                </div>
+                <div
+                  className={
+                    "card-footer" + (darkMode ? " home-card-footer" : "")
+                  }
+                >
+                  {card.navigateTo ? (
+                    <button
+                      className={
+                        "btn btn-primary btn-sm " + card.cardButtonClass
+                      }
+                      onClick={() => {
+                        navigate(
+                          "/" + card.navigateTo,
+                          card.state ? { state: card.state } : {}
+                        );
+                      }}
+                    >
+                      {card.buttonText}
+                    </button>
+                  ) : (
+                    <a
+                      href={card.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={
+                        "btn btn-primary btn-sm " + card.cardButtonClass
+                      }
+                    >
+                      {card.buttonText}
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-            <div
-              className={"card-footer" + (darkMode ? " home-card-footer" : "")}
-            >
-              { card.navigateTo ? (<button
-                className={"btn btn-primary btn-sm " + card.cardButtonClass}
-                onClick={() => {
-                  navigate("/" + card.navigateTo, card.state ? {state: card.state} : {});
-                }}
-              >
-                {card.buttonText}
-              </button>
-          ) : (<a
-                href={card.link}
-                target="_blank"
-                rel="noreferrer"
-                className={"btn btn-primary btn-sm " + card.cardButtonClass}  
-              >
-                {card.buttonText}
-              </a>
-          )}
-
-            </div>
-          </div>
-        </div>
           );
         })}
-        
       </div>
     </Container>
   );

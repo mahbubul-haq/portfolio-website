@@ -14,6 +14,13 @@
   --navbar-active-hover1: rgb(232, 29, 178);
   --navbar-active-hover: rgb(232, 29, 90);
   --navbar-active-hover2: rgb(197, 7, 92);
+
+  /* twitter dark mode */
+  --dark-mode-background: #15202b;
+  --dark-mode-menu: #192734;
+  --dark-mode-hover: #22303c;
+  --dark-mode-color-primary: #FFFFFF;
+  --dark-mode-color-secondary: #8899a6;
 }
 
 * {

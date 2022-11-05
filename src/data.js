@@ -296,11 +296,11 @@ export const projectsInfo = [
         },
       },
       {
-        title: "UBER - Ride Sharing & Car Rental Website",
+        title: "RIDER - Ride Sharing & Car Rental Website",
         role: "Everything",
         technology:
           "Django, Oracle PL/SQL, Bootstrap, Python, JavaScript, CSS, Leaflet",
-        description: `UBER is a ride sharing and car rental website. This website provides amazing
+        description: `RIDER is a ride sharing and car rental website. This website provides amazing
                 ride sharing experience and car rental service. This project was made for Database Sessional
                 course.
                 `,
@@ -308,12 +308,13 @@ export const projectsInfo = [
           "Ride Sharing, Car Rental",
           "Map Integration using Leaflet and GeoLocation",
         ],
-        githubLink: "https://github.com/mahbubul-haq/UBER-Ride-Sharing-Service",
+        githubLink: "https://github.com/mahbubul-haq/RIDER-Ride-Sharing-and-Car-Rental-Service",
         demonstration: {
-          showVideo: false,
-          embedLink: "",
+          showVideo: true,
+          embedLink: "https://www.youtube.com/embed/eiNzZp00KUg",
           imgLink: "",
         },
+        
       },
       {
         title: "Smart Room Simulation",
@@ -501,7 +502,7 @@ transport guidelines for travelling a particular place.`,
       "Makes day to day life transportation easier for people of all ages.",
     ],
     year: "2020",
-    link: "https://github.com/mahbubul-haq/UBER-Ride-Sharing-Service",
+    link: "https://github.com/mahbubul-haq/RIDER-Ride-Sharing-and-Car-Rental-Service",
     linkText: "Github Link",
   },
   {

@@ -25,27 +25,27 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const typewriter = new Typewriter(".love-programming", {
-      strings: ["is in love with programming"],
-      loop: true,
-      delay: 50,
-      deleteSpeed: 20,
-      pauseFor: 4000,
-      autoStart: true,
-    });
-
-    // const typewriter1 = new Typewriter(".my-work", {
-    //   strings: ["Full Stack Web Developer", "Competitive Programmer"],
+    // const typewriter = new Typewriter(".love-programming", {
+    //   strings: ["is in love with programming"],
     //   loop: true,
     //   delay: 50,
     //   deleteSpeed: 20,
-    //   pauseFor: 2500,
+    //   pauseFor: 4000,
     //   autoStart: true,
     // });
 
+    const typewriter1 = new Typewriter(".work-with", {
+      strings: ["Node.js", "Express.js", "React.js", "Bootstrap", "JavaScript", "CSS", "MongoDB", "PostgreSQL", "Oracle", "C++", "Python", "Algorithms", "Problem Solving"],
+      loop: true,
+      delay: 50,
+      deleteSpeed: 20,
+      pauseFor: 2500,
+      autoStart: true,
+    });
+
     return () => {
-      typewriter.stop();
-      // typewriter1.stop();
+      // typewriter.stop();
+      typewriter1.stop();
     };
   }, []);
 
@@ -102,13 +102,13 @@ const Home = () => {
                   className={
                     "h3 about-name mb-0" + (darkMode ? " color-primary" : "")
                   }
-                  style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}
+                  style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif", textTransform: "uppercase" }}
                 >
                   Mahbubul <span className="haque">Haque</span>
                 </div>
 
                 <div className="love-programming m-0 p-0">
-                 
+                 In love with programming
                 </div>
 
                 {/* <div className="about-institute">
@@ -116,6 +116,9 @@ const Home = () => {
                 </div> */}
                 <div className="about-work mt-3">
                   Full Stack Web Developer &#183; Competitive Programmer
+                </div>
+                <div style={{fontSize: "125%", fontWeight: 500,}}>
+                  I work with <span className="work-with" style={{color: "var(--navbar-active-hover1)"}}></span>
                 </div>
               </>
             ) : (

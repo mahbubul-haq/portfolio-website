@@ -349,7 +349,10 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  opacity: 60%;
 }
+
 
 .my-work {
   color: var(--navbar-active-hover);

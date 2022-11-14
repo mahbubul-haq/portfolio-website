@@ -72,7 +72,8 @@
 .home-github,
 .home-linkedin,
 .home-facebook,
-.home-codeforces {
+.home-codeforces,
+.home-leetcode {
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -88,7 +89,8 @@
 .home-github:hover,
 .home-linkedin:hover,
 .home-facebook:hover,
-.home-codeforces:hover {
+.home-codeforces:hover,
+.home-leetcode:hover {
   /* hover effect dark background*/
   background-color: rgba(0, 0, 0, 1);
   background-color: var(--navbar-active-hover);
@@ -108,6 +110,11 @@
 
 .home-codeforces {
   background-color: #1f8dd6;
+}
+
+.home-leetcode {
+  background-color: #f89f1b;
+  /* add a different background color */
 }
 
 .vertically-centered {
@@ -195,11 +202,13 @@
 
 .home-card {
   border-radius: 8px;
-  box-shadow: 2px 4px 8px 0 rgba(16, 136, 187, 0.5);
+  box-shadow: 0 0px 50px 0 rgba(104, 104, 150, 0.258);
   background-color: transparent;
   border: 0;
   outline: 0;
   padding: 0;
+  
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .home-card1 {
@@ -215,7 +224,7 @@
 }
 
 .home-card:hover {
-  box-shadow: 4px 8px 10px 0 rgba(16, 136, 187, 0.5);
+  box-shadow: 0 0px 50px 0 rgba(21, 21, 66, 0.404);
 }
 .home-card1:hover {
   box-shadow: 4px 8px 10px 0 rgba(152, 62, 110, 0.5);
@@ -362,6 +371,19 @@
 
 .dark-mode-menu {
   background-color: var(--dark-mode-menu);
+}
+
+.box-shadow {
+  box-shadow: 0 0px 30px 0 rgba(104, 104, 150, 0.258);
+}
+.box-shadow-none {
+  box-shadow: none;
+}
+.box-shadow-blue {
+  box-shadow: 0px 0px 5px 0 rgb(16, 136, 187);
+}
+.box-shadow-blue:hover {
+  box-shadow: 0px 0px 10px 0 rgb(16, 136, 187);
 }
 
 @media screen and (max-width: 768px) {

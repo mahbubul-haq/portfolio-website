@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { SiCodeforces, SiGithub } from "react-icons/si";
+import { SiCodeforces, SiGithub, SiLeetcode } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 import { homeCards } from "../../data";
 import { DarkModeContext } from "../context/DarkModeContext";
@@ -141,7 +141,7 @@ const Home = () => {
 
             <div className="mt-5 ms-auto me-auto">
               <Stack direction="horizontal" gap={2}>
-                <div className="home-linkedin">
+                <div className="home-linkedin" title="LinkedIn">
                   <a
                     href="https://www.linkedin.com/in/mahbubul-haque-807311189/"
                     target="_blank"
@@ -149,10 +149,10 @@ const Home = () => {
                     title="LinkedIn"
                     className={"home-link" + (darkMode ? " color-primary" : "")}
                   >
-                    <FaLinkedinIn size={30} />
+                    <FaLinkedinIn size={30} title="LinkedIn" />
                   </a>
                 </div>
-                <div className="home-github">
+                <div className="home-github" title="GitHub">
                   <a
                     href="https://www.github.com/mahbubul-haq"
                     target="_blank"
@@ -160,10 +160,10 @@ const Home = () => {
                     title="Github"
                     className={"home-link" + (darkMode ? " color-primary" : "")}
                   >
-                    <SiGithub size={30} />
+                    <SiGithub size={30} title="GitHub" />
                   </a>
                 </div>
-                <div className="home-codeforces">
+                <div className="home-codeforces" title="Codeforces">
                   <a
                     href="https://codeforces.com/profile/F__"
                     target="_blank"
@@ -171,10 +171,21 @@ const Home = () => {
                     title="Codeforces"
                     className={"home-link" + (darkMode ? " color-primary" : "")}
                   >
-                    <SiCodeforces size={30} />
+                    <SiCodeforces size={30} title="Codeforces" />
                   </a>
                 </div>
-                <div className="home-facebook">
+                <div className="home-leetcode" title="Leetcode">
+                  <a
+                    href="https://leetcode.com/mahbubulhaque/"
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Leetcode"
+                    className={"home-link" + (darkMode ? " color-primary" : "")}
+                  >
+                    <SiLeetcode size={30} title="Leetcode"/>
+                  </a>
+                </div>
+                {/* <div className="home-facebook">
                   <a
                     href="https://web.facebook.com/mahbubulhaque99"
                     target="_blank"
@@ -184,13 +195,13 @@ const Home = () => {
                   >
                     <FaFacebookF size={30} />
                   </a>
-                </div>
+                </div> */}
               </Stack>
             </div>
           </Stack>
         </Col>
       </Row>
-      <div className="row row-cols-1 row-cols-md-2 g-4 mt-5">
+      <div className="row row-cols-1 row-cols-md-2 g-5  mt-5">
         {homeCards.map((card, index) => {
           return (
             <div className="col" key={index}>
@@ -198,8 +209,9 @@ const Home = () => {
                 className={
                   "card h-100 home-card " +
                   card.cardClass +
-                  (darkMode ? " color-primary" : "")
+                  (darkMode ? " color-primary box-shadow-blue" : "")
                 }
+                
               >
                 <div
                   className={

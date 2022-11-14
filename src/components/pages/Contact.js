@@ -34,7 +34,7 @@ const Contact = () => {
             <div className="col">
               <div
                 className={
-                  "card h-100 " + (darkMode ? " dark-mode-menu" : "text-bg-light")
+                  "card h-100 " + (darkMode ? " dark-mode-menu" : "text-bg-transparent border-0 box-shadow")
                 }
               >
                 <div
@@ -63,7 +63,7 @@ const Contact = () => {
             <div className="col">
               <div
                 className={
-                  "card h-100 " + (darkMode ? "dark-mode-menu" : "text-bg-light")
+                  "card h-100 " + (darkMode ? "dark-mode-menu" : "text-bg-transparent border-0 box-shadow")
                 }
               >
                 <div
@@ -93,7 +93,7 @@ const Contact = () => {
             <div className="col">
               <div
                 className={
-                  "card h-100 " + (darkMode ? "dark-mode-menu" : "text-bg-light")
+                  "card h-100 " + (darkMode ? "dark-mode-menu" : "text-bg-transparent border-0 box-shadow")
                 }
               >
                 <div
@@ -122,7 +122,7 @@ const Contact = () => {
             <div className="col">
               <div
                 className={
-                  "card h-100 " + (darkMode ? "dark-mode-menu" : "text-bg-light")
+                  "card h-100 " + (darkMode ? "dark-mode-menu" : "text-bg-transparent border-0 box-shadow")
                 }
               >
                 <div

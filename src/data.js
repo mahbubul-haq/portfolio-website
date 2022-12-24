@@ -7,6 +7,10 @@ export const skillsData = [
             progress: 90,
         },
         {
+            name: "TypeScript",
+            progress: 90,
+        },
+        {
             name: "Python",
             progress: 90,
            
@@ -34,7 +38,7 @@ export const skillsData = [
     ]
     },
     {
-        skillType: "Frameworks",
+        skillType: "Frameworks & Library",
         list: [
         {
             name: "React.js",
@@ -42,9 +46,8 @@ export const skillsData = [
            
         },
         {
-            name: "Bootstrap",
-            progress: 90,
-            
+            name: "Redux",
+            progress: "85"
         },
         {
             name: "Express.js",
@@ -57,6 +60,11 @@ export const skillsData = [
             progress: 60,
            
         },
+        {
+          name: "Bootstrap",
+          progress: 90,
+          
+      },
         {
             name: "Django",
             progress: 70,
@@ -97,6 +105,10 @@ export const skillsData = [
     {
         skillType: "Tools",
         list: [
+        {
+            name: "REST API",
+            progress: 90,
+        },
         {
             name: "Git",
             progress: 90,
@@ -453,7 +465,7 @@ export const resumeEducation = [
   {
     institution: "Bangladesh University of Engineering and Technology (BUET)",
     degree: "Bachelor of Science in Computer Science and Engineering",
-    duration: "2017 - Present",
+    duration: "2017 -2022",
     address: "Dhaka, Bangladesh",
   }
 ]
@@ -461,7 +473,7 @@ export const resumeEducation = [
 export const resumeSkills = [
   {
     skillType: "Languages",
-    skills: "JavaScript, Python, C++, Java, CSS, HTML",
+    skills: "JavaScript, TypeScript, Python, C++, Java, CSS, HTML",
   },
   {
     skillType: "Frameworks",
@@ -473,7 +485,7 @@ export const resumeSkills = [
   },
   {
     skillType: "Tools",
-    skills: "Git, Github, Linux",
+    skills: "REST API, Git, Github, Linux",
   },
   {
     skillType: "Others",

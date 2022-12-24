@@ -35,7 +35,7 @@ const Home = () => {
     // });
 
     const typewriter1 = new Typewriter(".work-with", {
-      strings: ["Node.js", "Express.js", "React.js", "Bootstrap", "JavaScript", "CSS", "MongoDB", "PostgreSQL", "Oracle", "C++", "Python", "Algorithms", "Problem Solving"],
+      strings: ["Node.js", "Express.js", "React.js", "Redux", "REST API", "Bootstrap", "JavaScript", "TypeScript", "CSS", "MongoDB", "PostgreSQL", "Oracle", "C++", "Python", "Algorithms", "Problem Solving"],
       loop: true,
       delay: 50,
       deleteSpeed: 20,
@@ -89,6 +89,7 @@ const Home = () => {
               <div className="home-img-wrapper">
                 <Image
                   fluid
+                  thumbnail
                   className="profile-picture"
                   src="images/hi.png"
                   alt="Profile Picture"

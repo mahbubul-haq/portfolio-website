@@ -24,8 +24,8 @@ const About = () => {
             >About Me</div>
             <div className="">
               Hi,
-              <br></br>I am Mahbubul Haque, an undergraduate Computer Science
-              and Engineering student at{" "}
+              <br></br>My name is Mahbubul Haque. I studied Computer Science
+              and Engineering at{" "}
               <a className="custom-a" href="https://www.buet.ac.bd/">
                 Bangladesh University of Engineering and Technology (BUET)
               </a>
@@ -36,11 +36,11 @@ const About = () => {
               My interests are in <strong>Web Development</strong>,{" "}
               <strong>Algorithm Design and Analysis</strong>, and Competitive
               Programming. I am also interested in Machine Learning and
-              Artificial Intelligence. I like to learn new technology.
+              Artificial Intelligence. I love programming and want to do something meaningful in this field.
             </div>
             <div>
               {" "}
-              I was very active with Competitive Programming for more than{" "}
+              I am active with Competitive Programming for more than{" "}
               <strong>3 years</strong>, which prepared me as a good problem
               solver and efficient programmer. I have been learning different
               Web Development technologies for the last{" "}

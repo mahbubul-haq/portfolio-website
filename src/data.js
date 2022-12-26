@@ -152,14 +152,14 @@ export const skillsData = [
         
 ];
 
-export const lastUpdated = "October 6, 2022";
+export const lastUpdated = "December 26, 2022";
 
 export const problemSolvingData = [
     {
         oj: "CodeForces",
         username: "F__",
         profileLink: "https://codeforces.com/profile/F__",
-        solveCount : 883,
+        solveCount : 888,
     },
     {
         oj: "CodeChef",
@@ -221,7 +221,7 @@ export const problemSolvingData = [
         oj: "LeetCode",
         username: "mahbubulhaque",
         profileLink: "https://leetcode.com/mahbubulhaque/",
-        solveCount : 45,
+        solveCount : 160,
     },
     {
         oj: "Toph",

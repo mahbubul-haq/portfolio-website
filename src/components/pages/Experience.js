@@ -63,7 +63,7 @@ const Experience = () => {
             Problem Solving
           </div>
           <div className="mt-3 mb-1" style={{ textAlign: "justify" }}>
-            I was an avid learner of Algorithms and Data Structures, Mathematics
+            I am an avid learner of Algorithms and Data Structures, Mathematics
             and Problem solving strategies. I have solved 1500+ problems on
             various platforms.{" "}
             <span

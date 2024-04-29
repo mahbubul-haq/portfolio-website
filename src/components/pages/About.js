@@ -12,7 +12,7 @@ const About = () => {
 
   useEffect(() => {
     setPage(1);
-  }, []);
+  });
 
   return (
     <Container fluid className="common-container">

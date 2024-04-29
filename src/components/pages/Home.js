@@ -16,12 +16,13 @@ import Typewriter from "typewriter-effect/dist/core";
 
 const Home = () => {
   const { setPage } = React.useContext(DarkModeContext);
-  // const [isEnglish, setIsEnglish] = React.useState(true);
+  const [isEnglish, setIsEnglish] = React.useState(true);
   const { darkMode } = React.useContext(DarkModeContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     setPage(0);
+    setIsEnglish(true);
   });
 
   useEffect(() => {

@@ -13,7 +13,7 @@ const Projects = () => {
 
   useEffect(() => {
     setPage(3);
-  }, []);
+  });
 
 
   return (

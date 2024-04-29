@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     setPage(0);
     setIsEnglish(true);
-  });
+  }, [setPage]);
 
   useEffect(() => {
     // const typewriter = new Typewriter(".love-programming", {

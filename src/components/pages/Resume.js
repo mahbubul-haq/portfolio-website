@@ -17,7 +17,7 @@ const Resume = () => {
 
     useEffect(() => {
         setPage(5);
-    }, []);
+    });
 
     const downloadResume = () => {
         fetch("files/Resume - Mahbubul Haque.pdf").then((response) => {

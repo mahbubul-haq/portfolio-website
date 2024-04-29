@@ -15,7 +15,7 @@ const Skills = () => {
 
   useEffect(() => {
     setPage(2);
-  }, []);
+  });
 
   return (
     <Container fluid className="common-container">

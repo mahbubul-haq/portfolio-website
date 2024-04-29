@@ -28,7 +28,7 @@ const Experience = () => {
   
   useEffect(() => {
     setPage(4);
-  }, []);
+  });
 
   useEffect(() => {
     let element1 = document.getElementById("problem-solving");

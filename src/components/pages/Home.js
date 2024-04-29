@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { SiCodeforces, SiGithub, SiLeetcode } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 import { homeCards } from "../../data";
@@ -16,13 +16,13 @@ import Typewriter from "typewriter-effect/dist/core";
 
 const Home = () => {
   const { setPage } = React.useContext(DarkModeContext);
-  const [isEnglish, setIsEnglish] = React.useState(true);
+  // const [isEnglish, setIsEnglish] = React.useState(true);
   const { darkMode } = React.useContext(DarkModeContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     setPage(0);
-  }, []);
+  });
 
   useEffect(() => {
     // const typewriter = new Typewriter(".love-programming", {
